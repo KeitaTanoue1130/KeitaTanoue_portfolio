@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keita Tanoue Portfolio</title>
+    <!-- reset CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
+    <!-- original CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header-container">
+        <div class="header-logo">
+            <a href="index.html"><img src="./image/logo.png" alt="ロゴ"></a>
+        </div>
+        <nav>
+            <ul class="header-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- nav
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav> -->
+
+
+
+
+    <!-- fv -->
+    <section class="fv">
+        <div class="fv-text">
+            <h2>ECサイトの改善に貢献できる<br>フロントエンドエンジニア（仮）</h2>
+            <p>コーディングをベースにユーザーの行動を意識した制作</p>
+        </div>
+    </section>
+
+    <div class="wrapper">
+        <!-- about -->
+        <section class="about" id="about">
+            <h2 class="main-heading">About</h2>
+            <ul class="about-container">
+                <li>
+                    <div>
+                        <img src="./image/saku.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        接客業および法律事務所での経験を通じて、相手のニーズを正確に捉える力を培ってきました。<br>
+                        現在は職業訓練校にてWeb制作を学び、コーディングスキルに加えて、ユーザーの行動を意識した改善提案にも取り組んでいます。
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- works -->
+        <section class="works" id="works">
+            <h2 class="main-heading">Works</h2>
+
+            <!-- Web -->
+            <div class="work-section">
+                <h3>Webサイト</h3>
+                <ul class="work-list">
+                    <li>
+                        <div class="work-thumb">
+                            <a href="./work_cafe.html"><img src="./work/webサイト/work2.gif" alt=""></a>
+                        </div>
+                        <p>カフェサイト</p>
+                    </li>
+                    <li>
+                        <div class="work-thumb">
+                            <a href="#"><img src="./work/webサイト/bicycleshop.png" alt=""></a>
+                        </div>
+                        <p>サイクリングショップ</p>
+                    </li>
+                    <li>
+                        <div class="work-thumb">
+                            <a href="#"><img src="./work/webサイト/My Work thumb.png" alt=""></a>
+                        </div>
+                        <p> My Work</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 動画 -->
+            <div class="work-section">
+                <h3>動画</h3>
+                <ul class="work-list">
+                    <li class="work-item">
+                        <a href="#">
+                            <div class="work-thumb">
+
+                                <!-- サムネ -->
+                                <img src="./work/動画/tacos_thumb.png" alt="動画サムネ" class="thumb">
+
+                                <!-- 動画 -->
+                                <video class="hover-video" muted loop playsinline preload="none">
+                                    <source src="./work/動画/tacos mov.mp4" type="video/mp4">
+                                </video>
+
+                            </div>
+                        </a>
+
+                        <p class="work-title">How To Make TACOS</p>
+                    </li>
+                    <li class="work-item">
+                        <a href="#">
+                            <div class="work-thumb">
+
+                                <!-- サムネ -->
+                                <img src="./work/動画/春季講習_thumb.png" alt="動画サムネ" class="thumb">
+
+                                <!-- 動画 -->
+                                <video class="hover-video" muted loop playsinline preload="none">
+                                    <source src="./work/動画/春季講習_mov.mp4" type="video/mp4">
+                                </video>
+
+                            </div>
+                        </a>
+
+                        <p class="work-title">春季講習バナー</p>
+                    </li>
+                    <li class="work-item">
+                        <a href="#">
+                            <div class="work-thumb">
+
+                                <!-- サムネ -->
+                                <img src="./work/動画/short_thumb.jpeg" alt="動画サムネ" class="thumb">
+
+                                <!-- 動画 -->
+                                <video class="hover-video" muted loop playsinline preload="none">
+                                    <source src="./work/動画/short_thumb .mp4" type="video/mp4">
+                                </video>
+
+                            </div>
+                        </a>
+
+                        <p class="work-title">ジムPRshort動画</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- バナー -->
+            <div class="work-section">
+                <h3>バナー</h3>
+                <ul class="work-list">
+                    <li>
+                        <div class="work-thumb">
+                            <img src="./work/バナー/赤の習慣.jpg" alt="">
+                        </div>
+                        <p> トマトジュースPRバナー</p>
+                    </li>
+                    <li>
+                        <div class="work-thumb">
+                            <img src="./work/バナー/春季講習バナー.jpeg" alt="">
+                        </div>
+                        <p> 春季講習女性向け</p>
+                    </li>
+                    <li>
+                        <div class="work-thumb">
+                            <img src="./work/バナー/クーポンthumb.jpeg" alt="">
+                        </div>
+                        <p>クーポン</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- フライヤー -->
+            <div class="work-section">
+                <h3>フライヤー</h3>
+                <ul class="work-list">
+                    <li>
+                        <div class="work-thumb">
+                            <img src="./work/フライヤー/名もなきサンドイッチサムネ用.jpg" alt="">
+                        </div>
+                        <p>サンドイッチ屋ポスター</p>
+                    </li>
+                    <li>
+                        <div class="work-thumb">
+                            <img src="./image/work-blank1.gif" alt="">
+                        </div>
+                        <p>準備中</p>
+                    </li>
+                    <li>
+                        <div class="work-thumb">
+                            <img src="./image/work-blank1.gif" alt="">
+                        </div>
+                        <p>準備中</p>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- skills -->
+        <section class="skills" id="skills">
+            <h2 class="main-heading">Skills</h2>
+
+            <ul class="skills-list">
+
+                <li>
+                    <h3>HTML / CSS</h3>
+                    <p>レスポンシブ対応を含めたWebサイトの構築が可能です。構造を意識したコーディングを行います。</p>
+                    <p>レスポンシブ対応 / Flexbox / Grid 使用可能</p>
+                </li>
+
+                <li>
+                    <h3>Photoshop / Illustrator</h3>
+                    <p>バナーやビジュアル制作が可能です。視線誘導やレイアウトを意識したデザインを行います。</p>
+                </li>
+
+                <li>
+                    <h3>動画編集（Premiere Pro）</h3>
+                    <p>カット編集や簡単なアニメーションを用いた動画制作が可能です。</p>
+                </li>
+
+                <li>
+                    <h3>改善提案</h3>
+                    <p>ユーザーの行動を意識し、導線やUIの改善提案を行うことができます。</p>
+                </li>
+
+            </ul>
+        </section>
+    </div>
+
+
+
+    <footer>
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <h2 class="main-heading">Contact</h2>
+
+            <form class="contact-form">
+
+                <div class="form-group">
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" placeholder="エル・ローライト">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" placeholder="example@gmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="type">お問い合わせ種別</label>
+                    <select id="type">
+                        <option>選択してください</option>
+                        <option>制作依頼</option>
+                        <option>ご相談</option>
+                        <option>その他</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" rows="5"></textarea>
+                </div>
+
+                <button type="button" class="submit-btn">送信する</button>
+
+            </form>
+        </section>
+    </footer>
+
+    <!-- script -->
+    <script>
+        document.querySelectorAll('.work-thumb').forEach(el => {
+            const video = el.querySelector('video');
+
+            el.addEventListener('mouseenter', () => {
+                video.currentTime = 0;
+                video.play();
+            });
+
+            el.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+    </script>
+</body>
+
+</html>

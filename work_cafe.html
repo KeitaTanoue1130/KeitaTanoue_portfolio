@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>カフェサイト制作</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- header（indexと同じものをコピペ） -->
+    <header class="header-container">
+        <div class="header-logo">
+            <a href="index.html"><img src="./image/logo.png" alt="ロゴ"></a>
+        </div>
+        <nav>
+            <ul class="header-nav">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#works">Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+
+        <!-- タイトル -->
+        <section class="work-detail">
+            <h1>カフェサイト制作</h1>
+
+            <!-- 画像（PC / SP切り替え） -->
+            <picture>
+                <source srcset="./work/webサイト/cafe_mobil.png" media="(max-width: 768px)">
+                <img src="./work/webサイト/cafe_dtp.png" alt="カフェサイト">
+            </picture>
+
+            <!-- 概要 -->
+            <ul class="work-info">
+                <li>制作目的：カフェの集客向上</li>
+                <li>ターゲット：20〜30代女性</li>
+                <li>制作時間：約５時間</li>
+            </ul>
+
+            <!-- 工夫 -->
+            <div class="work-section">
+                <h2>工夫した点</h2>
+                <p>
+                    ファーストビューに視線誘導を意識した配置を行い、CTAのクリック率向上を意識しました。
+                </p>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

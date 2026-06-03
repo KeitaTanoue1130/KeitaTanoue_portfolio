@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+/* 共通部分 */
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #383E45;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #383E45;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.wrapper {
+    width: 50%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header-heading img {
+    /* width: 20.83%; */
+    max-width: 200px;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.header-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.header-nav li {
+    font-size: 0.9rem;
+}
+
+
+/* main */
+
+.main-visual,
+.about-area,
+.bicycle-area,
+.access-area{
+margin-bottom: 104px
+}
+
+
+
+.main-area-heading {
+    border-bottom: 1px solid #383E45;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 44px;
+}
+
+/* main-visual */
+
+.main-visual img {
+    aspect-ratio: 1920/600;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+/* about */
+
+.about-container {
+    display: flex;
+    gap: 42px;
+    align-items: center;
+}
+
+.about-image img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: bottom;
+    min-width: 160px;
+}
+
+.about-text-area h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.about-text-area p {
+    font-size: .9rem;
+}
+
+/* Bicycle */
+
+.bicycle-container {
+    display: flex;
+    gap: 30px;
+}
+
+.bicycle-container li {
+    text-align: center;
+    /* width: 33.33%; */
+    width: calc(100% / 3);
+    /* flex: 1; */
+}
+
+.bicycle-container li img {
+    width: 100%;
+    aspect-ratio: 300/182;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.bicycle-container li h3{
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.bicycle-container li p {
+    font-size: .9rem;
+}
+
+/* Access */
+
+.access-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.access-area-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 37.6%;
+}
+
+.access-area-map {
+    width: 58.96%;
+}
+
+.access-area-map iframe {
+    width: 100%;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    padding: 8px 0;
+}
+
+small {
+    font-size: 0.625em;
+}
+
+

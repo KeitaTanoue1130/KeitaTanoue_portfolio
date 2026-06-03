@@ -63,169 +63,204 @@
 
         <!-- skills -->
         <section class="skills" id="skills">
+
             <h2 class="main-heading">Skills</h2>
 
-            <div class="skills-inner">
-                <ul class="skills-list">
-                    <li>
-                        <h3>HTML / CSS</h3>
-                        <p>レスポンシブ対応を含めたWebサイトの構築が可能です。構造を意識したコーディングを行います。</p>
-                        <p>レスポンシブ対応 / Flexbox / Grid</p>
-                    </li>
-                    <li>
-                        <h3>Photoshop / Illustrator</h3>
-                        <p>バナーやビジュアル制作が可能です。視線誘導やレイアウトを意識したデザインを行います。</p>
-                    </li>
-                    <li>
-                        <h3>Premiere Pro</h3>
-                        <p>カット編集や簡単なアニメーションを用いた動画制作が可能です。</p>
-                    </li>
-                    <li>
-                        <h3>改善提案</h3>
-                        <p>ユーザーの行動を意識し、導線やUIの改善提案を行うことができます。</p>
-                    </li>
-                </ul>
-                <div class="learning-box">
-                    <h3>現在学習中</h3>
-                    <ul class="learning-list">
-                        <li>Figma</li>
-                        <li>Git / GitHub</li>
-                        <li>SEO</li>
-                        <li>Google Analytics 4</li>
-                        <li>WordPress</li>
-                        <li>Java</li>
-                        <li>AI活用</li>
-                    </ul>
-                </div>
+            <ul class="skills-list">
+
+                <li>
+                    <h3>HTML / CSS</h3>
+                    <p>
+                        レスポンシブ対応を含めたWebサイトの構築が可能です。
+                        Flexbox・Gridを用いたレイアウト設計を行います。
+                    </p>
+                </li>
+
+                <li>
+                    <h3>JavaScript</h3>
+                    <p>
+                        ユーザー体験を向上させるインタラクション実装が可能です。
+                        作品フィルターやフォームバリデーションを実装しています。
+                    </p>
+                </li>
+
+                <li>
+                    <h3>Photoshop / Illustrator</h3>
+                    <p>
+                        バナーやビジュアル制作が可能です。
+                        視線誘導やレイアウトを意識したデザインを行います。
+                    </p>
+                </li>
+
+                <li>
+                    <h3>Premiere Pro</h3>
+                    <p>
+                        カット編集やテロップ作成、BGM・効果音の調整が可能です。
+                        紹介動画やショート動画の制作経験があります。
+                    </p>
+                </li>
+
+            </ul>
+
+            <!-- 強み -->
+
+            <div class="strength-box">
+
+                <h3>強み</h3>
+
+                <p>
+                    ユーザー行動を意識した改善提案ができます。
+                    接客業や法務事務所での経験を活かし、
+                    相手の課題やニーズを整理しながら制作に取り組んでいます。
+                    制作だけでなく、導線設計やUI改善の視点を持ちながら
+                    Webサイト制作を行っています。
+                </p>
+
             </div>
+
+            <!-- 現在学習中 -->
+
+            <div class="learning-box">
+
+                <h3>現在学習中</h3>
+
+                <ul class="learning-list">
+                    <li>Figma</li>
+                    <li>Git / GitHub</li>
+                    <li>SEO</li>
+                    <li>Google Analytics 4</li>
+                    <li>WordPress</li>
+                    <li>AI活用</li>
+                </ul>
+
+            </div>
+
         </section>
 
         <!-- works -->
         <section class="works" id="works">
+
             <h2 class="main-heading">Works</h2>
+
+            <div class="work-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="movie">Movie</button>
+                <button class="filter-btn" data-filter="graphic">Graphic</button>
+            </div>
+
             <p class="work-note">
                 Click image for details
             </p>
 
-            <!-- Web -->
-            <div class="work-section">
-                <h3>Web</h3>
-                <ul class="work-list">
-                    <li>
+            <ul class="work-list">
+
+                <!-- WEB -->
+
+                <li class="work-item" data-category="web">
+                    <a href="./work_cafe.html">
                         <div class="work-thumb">
-                            <a href="./work_cafe.html"><img src="./work/web/mokup/cafe_mokup_thumb.gif" alt=""></a>
+                            <img src="./work/web/mokup/cafe_mokup_thumb.gif" alt="">
                         </div>
                         <p>カフェサイト</p>
-                    </li>
-                    <li>
+                    </a>
+                </li>
+
+                <li class="work-item" data-category="web">
+                    <a href="./bicycle.html">
                         <div class="work-thumb">
-                            <a href="./bicycle.html"><img src="./work/web/mokup/bicycle_mokup_thumb.gif" alt=""></a>
+                            <img src="./work/web/mokup/bicycle_mokup_thumb.gif" alt="">
                         </div>
                         <p>サイクリングショップ</p>
-                    </li>
-                    <li>
+                    </a>
+                </li>
+
+                <li class="work-item" data-category="web">
+                    <a href="#">
                         <div class="work-thumb">
-                            <a href="#"><img src="./work/web/mokup/mywork_mokup_thumb.gif" alt=""></a>
+                            <img src="./work/web/mokup/mywork_mokup_thumb.gif" alt="">
                         </div>
-                        <p> My Work</p>
-                    </li>
-                </ul>
-            </div>
+                        <p>My Work</p>
+                    </a>
+                </li>
 
-            <!-- 動画 -->
-            <div class="work-section">
-                <h3>Movie</h3>
-                <ul class="work-list">
-                    <li class="work-item">
-                        <a href="./web_introduce.html">
-                            <div class="work-thumb">
+                <!-- MOVIE -->
 
-                                <!-- サムネ -->
-                                <img src="./work/movie/Web_thumb.png" alt="動画サムネ" class="thumb">
+                <li class="work-item" data-category="movie">
+                    <a href="./web_introduce.html">
+                        <div class="work-thumb">
 
-                                <!-- 動画 -->
-                                <video class="hover-video" muted loop playsinline preload="none">
-                                    <source src="./work/movie/Web_mov.mp4" type="video/mp4">
-                                </video>
+                            <img src="./work/movie/Web_thumb.png" alt="" class="thumb">
 
-                            </div>
-                        </a>
+                            <video class="hover-video" muted loop playsinline preload="none">
+                                <source src="./work/movie/Web_mov.mp4" type="video/mp4">
+                            </video>
 
-                        <p class="work-title">Web業界紹介</p>
-                    </li>
+                        </div>
+                        <p>Web業界紹介</p>
+                    </a>
+                </li>
 
-                    <li class="work-item">
-                        <a href="./gym_pr.html">
-                            <div class="work-thumb">
+                <li class="work-item" data-category="movie">
+                    <a href="./gym_pr.html">
+                        <div class="work-thumb">
 
-                                <!-- サムネ -->
-                                <img src="./work/movie/short_thumb.jpeg" alt="動画サムネ" class="thumb">
+                            <img src="./work/movie/short_thumb.jpeg" alt="" class="thumb">
 
-                                <!-- 動画 -->
-                                <video class="hover-video" muted loop playsinline preload="none">
-                                    <source src="./work/movie/short_thumb.mp4" type="video/mp4">
-                                </video>
+                            <video class="hover-video" muted loop playsinline preload="none">
+                                <source src="./work/movie/short_thumb.mp4" type="video/mp4">
+                            </video>
 
-                            </div>
-                        </a>
+                        </div>
+                        <p>ジムPR short動画</p>
+                    </a>
+                </li>
 
-                        <p class="work-title">ジムPRshort動画</p>
-                    </li>
+                <li class="work-item" data-category="movie">
+                    <a href="./tacos.html">
+                        <div class="work-thumb">
 
-                    <li class="work-item">
-                        <a href="./tacos.html">
-                            <div class="work-thumb">
+                            <img src="./work/movie/tacos_thumb.png" alt="" class="thumb">
 
-                                <!-- サムネ -->
-                                <img src="./work/movie/tacos_thumb.png" alt="動画サムネ" class="thumb">
+                            <video class="hover-video" muted loop playsinline preload="none">
+                                <source src="./work/movie/tacos mov.mp4" type="video/mp4">
+                            </video>
 
-                                <!-- 動画 -->
-                                <video class="hover-video" muted loop playsinline preload="none">
-                                    <source src="./work/movie/tacos mov.mp4" type="video/mp4">
-                                </video>
+                        </div>
+                        <p>How To Make TACOS</p>
+                    </a>
+                </li>
 
-                            </div>
-                        </a>
+                <!-- GRAPHIC -->
 
-                        <p class="work-title">How To Make TACOS</p>
-                    </li>
+                <li class="work-item" data-category="graphic">
+                    <a href="./tomato_bunner.html">
+                        <div class="work-thumb graphic-thumb">
+                            <img src="./work/banner/akanosyukan.jpg" alt="">
+                        </div>
+                        <p>トマトジュースPRバナー</p>
+                    </a>
+                </li>
 
-                </ul>
-            </div>
+                <li class="work-item" data-category="graphic">
+                    <a href="./namonaki.html">
+                        <div class="work-thumb graphic-thumb">
+                            <img src="./work/flyer/namonaki.jpg" alt="">
+                        </div>
+                        <p>サンドイッチ屋ポスター</p>
+                    </a>
+                </li>
 
-            <!-- バナー -->
-            <div class="work-section">
-                <h3>Graphic</h3>
-                <ul class="work-list">
-                    <li>
-                        <a href="./tomato_bunner.html">
-                            <div class="work-thumb graphic-thumb">
-                                <img src="./work/banner/akanosyukan.jpg" alt="トマトジュースPRバナー">
-                            </div>
-                            <p>トマトジュースPRバナー</p>
-                        </a>
-                    </li>
+                <li class="work-item" data-category="graphic">
+                    <a href="./syunkikousyu.html">
+                        <div class="work-thumb graphic-thumb">
+                            <img src="./work/banner/syunkikousyu.jpeg" alt="">
+                        </div>
+                        <p>春季講習女性向け</p>
+                    </a>
+                </li>
 
-                    <li>
-                        <a href="./namonaki.html">
-                            <div class="work-thumb graphic-thumb">
-                                <img src="./work/flyer/namonaki.jpg" alt="サンドイッチ屋ポスター">
-                            </div>
-                            <p>サンドイッチ屋ポスター</p>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="./syunkikousyu.html">
-                            <div class="work-thumb graphic-thumb">
-                                <img src="./work/banner/syunkikousyu.jpeg" alt="春季講習女性向けバナー">
-                            </div>
-                            <p>春季講習女性向け</p>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
+            </ul>
 
         </section>
 
@@ -239,55 +274,35 @@
         <section class="contact" id="contact">
             <h2 class="main-heading">Contact</h2>
 
-            <form class="contact-form">
+            <form id="contact-form" class="contact-form">
 
                 <div class="form-group">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" placeholder="エル・ローライト">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                    <p class="error-message" id="name-error"></p>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="email" placeholder="example@gmail.com">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                    <p class="error-message" id="email-error"></p>
                 </div>
 
                 <div class="form-group">
-                    <label for="type">お問い合わせ種別</label>
-                    <select id="type">
-                        <option>選択してください</option>
-                        <option>制作依頼</option>
-                        <option>ご相談</option>
-                        <option>その他</option>
-                    </select>
+                    <label for="message">Message</label>
+                    <textarea id="message"></textarea>
                 </div>
 
-                <div class="form-group">
-                    <label for="message">お問い合わせ内容</label>
-                    <textarea id="message" rows="5"></textarea>
-                </div>
-
-                <button type="button" class="submit-btn">送信する</button>
+                <button type="submit">
+                    Send
+                </button>
 
             </form>
         </section>
     </footer>
 
     <!-- script -->
-    <script>
-        document.querySelectorAll('.work-thumb').forEach(el => {
-            const video = el.querySelector('video');
-
-            el.addEventListener('mouseenter', () => {
-                video.currentTime = 0;
-                video.play();
-            });
-
-            el.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -42,7 +42,7 @@ section {
 /* header */
 
 .header-logo img {
-    max-width: 300px;
+    max-width: 150px;
 }
 
 .header-container {
@@ -51,6 +51,10 @@ section {
     align-items: center;
     border-bottom: 1px solid #eee;
     padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
 }
 
 .header-nav {
@@ -581,6 +585,7 @@ textarea {
     .header-container {
         flex-direction: column;
         gap: 10px;
+        position: static;
     }
 
     .header-logo img {

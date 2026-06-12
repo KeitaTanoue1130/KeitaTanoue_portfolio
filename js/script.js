@@ -125,3 +125,22 @@ if (contactForm) {
     });
 
 }
+
+
+// ====================
+// ハンバーガー
+// ====================
+const hamburger = document.querySelector('.hamburger');
+const spNav = document.querySelector('.sp-nav');
+
+hamburger.addEventListener('click', () => {
+    spNav.classList.toggle('is-active');
+    hamburger.classList.toggle('is-active');
+});
+
+document.querySelectorAll('.sp-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        spNav.classList.remove('is-active');
+    });
+});
+

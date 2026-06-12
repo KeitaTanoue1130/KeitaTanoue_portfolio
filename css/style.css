@@ -184,6 +184,27 @@ h2 {
     line-height: 1.8;
 }
 
+.about-container img{
+    max-width: 200px;
+    animation: floatCat 4s ease-in-out infinite;
+}
+
+@keyframes floatCat{
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+
+}
+
 /* work */
 
 .work-section h3 {
@@ -210,6 +231,18 @@ h2 {
     margin-top: -10px;
     margin-bottom: 40px;
     letter-spacing: 0.05em;
+}
+
+.work-item[data-category="web"] .work-thumb{
+    border-top:6px solid #4A90E2;
+}
+
+.work-item[data-category="movie"] .work-thumb{
+    border-top:6px solid #E74C3C;
+}
+
+.work-item[data-category="graphic"] .work-thumb{
+    border-top:6px solid #27AE60;
 }
 
 .work-thumb {
@@ -252,9 +285,33 @@ h2 {
     border-radius: 999px;
 }
 
+.filter-btn[data-filter="web"]{
+    border-color:#4A90E2;
+}
+
+.filter-btn[data-filter="movie"]{
+    border-color:#E74C3C;
+}
+
+.filter-btn[data-filter="graphic"]{
+    border-color:#27AE60;
+}
+
 .filter-btn.active {
     background: #333;
     color: #fff;
+}
+
+.filter-btn[data-filter="web"].active{
+    background:#4A90E2;
+}
+
+.filter-btn[data-filter="movie"].active{
+    background:#E74C3C;
+}
+
+.filter-btn[data-filter="graphic"].active{
+    background:#27AE60;
 }
 
 .work-item.is-hidden {
@@ -426,6 +483,37 @@ h2 {
     background: #fff;
     border-radius: 999px;
     font-size: 14px;
+}
+
+/* いったん隠す */
+.skills-list li,
+.learning-box,
+.strength-box {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+/* ふわっと出す */
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.skills-list li:nth-child(1){
+    transition-delay: 0.1s;
+}
+
+.skills-list li:nth-child(2){
+    transition-delay: 0.2s;
+}
+
+.skills-list li:nth-child(3){
+    transition-delay: 0.3s;
+}
+
+.skills-list li:nth-child(4){
+    transition-delay: 0.4s;
 }
 
 /* contact */

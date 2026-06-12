@@ -144,3 +144,30 @@ document.querySelectorAll('.sp-nav a').forEach(link => {
     });
 });
 
+
+// ====================
+//  スキルカード　ふわっと
+// ====================
+const fadeTargets = document.querySelectorAll(
+    '.skills-list li, .learning-box, .strength-box'
+);
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add('fade-in');
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+fadeTargets.forEach(target => {
+    observer.observe(target);
+});

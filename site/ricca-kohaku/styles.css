@@ -1630,7 +1630,7 @@ button {
 
 @media (min-width: 768px) {
   body:not(.lower-page) .hero-copy-art {
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
   }
 
@@ -3162,6 +3162,119 @@ button {
     line-height: 1.7;
     white-space: nowrap;
     text-align: center;
+  }
+
+  .lower-page .site-nav .nav-submenu {
+    color: var(--ink);
+    background:
+      linear-gradient(rgba(255, 254, 249, 0.96), rgba(255, 254, 249, 0.96)),
+      url("assets/img/01fv/fv_paper_new.webp") center / cover no-repeat;
+    border-color: rgba(117, 101, 79, 0.18);
+    border-top-color: rgba(184, 148, 76, 0.72);
+    box-shadow: 0 16px 34px rgba(67, 56, 39, 0.16);
+  }
+
+  .lower-page .site-nav .nav-submenu a {
+    color: inherit;
+  }
+
+  .lower-page .site-nav .nav-submenu a + a {
+    border-top-color: rgba(117, 101, 79, 0.16);
+  }
+
+  .lower-page .site-nav .nav-submenu a:hover {
+    color: var(--gold);
+    background: transparent;
+  }
+}
+
+/* PC下層ページ：スクロール後はトップページと同じ追従ヘッダーにする */
+@media (min-width: 768px) {
+  .lower-page .site-header.is-scrolled {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 95;
+    grid-template-columns: auto auto 1fr;
+    gap: clamp(18px, 3vw, 42px);
+    align-items: center;
+    min-height: 46px;
+    padding: 5px clamp(18px, 3vw, 34px);
+    color: #fff;
+    background: rgba(19, 18, 16, 0.96);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+    transform: translateY(0);
+    backdrop-filter: blur(10px);
+  }
+
+  .lower-page .site-header.is-scrolled .brand {
+    width: auto;
+    height: auto;
+    min-width: 150px;
+    color: #fff;
+    background: transparent;
+  }
+
+  .lower-page .site-header.is-scrolled .brand-small,
+  .lower-page .site-header.is-scrolled .brand-main {
+    opacity: 1;
+  }
+
+  .lower-page .site-header.is-scrolled .header-tel {
+    display: block;
+    color: #fff;
+  }
+
+  .lower-page .site-header.is-scrolled .site-nav {
+    position: static;
+    justify-self: end;
+    align-items: center;
+    gap: clamp(10px, 1.35vw, 22px);
+    min-height: 0;
+    color: #fff;
+    font-size: clamp(0.68rem, 0.78vw, 0.82rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+  }
+
+  .lower-page .site-header.is-scrolled .site-nav a,
+  .lower-page .site-header.is-scrolled .site-nav .nav-parent {
+    min-height: auto;
+    padding: 2px 0;
+    color: #fff;
+    line-height: 1.35;
+    writing-mode: horizontal-tb;
+  }
+
+  .lower-page .site-header.is-scrolled .site-nav a:hover,
+  .lower-page .site-header.is-scrolled .site-nav .nav-parent:hover {
+    color: var(--gold);
+  }
+
+  .lower-page .site-header.is-scrolled .site-nav .lower-firstview-reserve {
+    display: none;
+  }
+
+  .lower-page .site-header.is-scrolled .site-nav .nav-submenu {
+    color: #fff;
+    background:
+      linear-gradient(rgba(28, 25, 20, 0.96), rgba(28, 25, 20, 0.96)),
+      url("assets/img/01fv/fv_paper_new.webp") center / cover no-repeat;
+    border-color: rgba(255, 255, 255, 0.14);
+    border-top-color: rgba(184, 148, 76, 0.74);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+  }
+
+  .lower-page .site-header.is-scrolled .site-nav .nav-submenu a {
+    color: #fff;
+  }
+
+  .lower-page .site-header.is-scrolled .site-nav .nav-submenu a + a {
+    border-top-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .lower-page .site-header.is-scrolled .site-nav .nav-submenu a:hover {
+    color: var(--gold);
+    background: rgba(255, 255, 255, 0.06);
   }
 }
 
@@ -5915,10 +6028,11 @@ body.lower-cuisine .lower-hero.js-reveal {
     justify-content: center;
     width: min(326px, calc(100vw - 36px));
     min-height: min(560px, calc(100vh - 40px));
-    padding: 38px 26px 34px 148px;
-    overflow: hidden;
+    padding: 42px 24px 34px 148px;
+    overflow-x: hidden;
+    overflow-y: auto;
     color: #fff;
-    background: rgba(18, 20, 18, 0.96);
+    background: rgba(18, 20, 18, 0.98);
     border: 1px solid rgba(255, 255, 255, 0.16);
     box-shadow: 0 22px 44px rgba(0, 0, 0, 0.34);
     opacity: 0;
@@ -5934,8 +6048,8 @@ body.lower-cuisine .lower-hero.js-reveal {
     width: 108px;
     content: "";
     background:
-      linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.16)),
-      url("assets/img/06kohaku/new_kohaku_aki.webp") center / cover no-repeat;
+      linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.22)),
+      url("assets/img/00other/footer_mainimage.webp") center / cover no-repeat;
   }
 
   .site-nav::after {
@@ -5957,9 +6071,11 @@ body.lower-cuisine .lower-hero.js-reveal {
   .site-nav a {
     position: relative;
     z-index: 1;
-    width: fit-content;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
     min-height: auto;
-    padding: 7px 0;
+    padding: 6px 0;
     color: #fff;
     border: 0;
     font-size: 0.82rem;
@@ -5978,14 +6094,18 @@ body.lower-cuisine .lower-hero.js-reveal {
     position: relative;
     z-index: 1;
     display: block;
+    width: 100%;
+    margin: 0 0 8px;
   }
 
   .site-nav .nav-submenu {
     position: static;
     display: grid;
+    gap: 4px;
+    width: 100%;
     min-width: 0;
-    padding: 0 0 6px 12px;
-    color: rgba(255, 255, 255, 0.72);
+    padding: 0 0 0 1.35em;
+    color: rgba(255, 255, 255, 0.78);
     background: transparent;
     border: 0;
     box-shadow: none;
@@ -5996,11 +6116,12 @@ body.lower-cuisine .lower-hero.js-reveal {
   }
 
   .site-nav .nav-submenu a {
-    width: fit-content;
-    padding: 2px 0 !important;
+    width: 100%;
+    padding: 1px 0 !important;
     color: inherit;
     font-size: 0.68rem;
     font-weight: 400;
+    line-height: 1.5;
   }
 
   .site-nav a:nth-last-child(2) {
@@ -6008,13 +6129,13 @@ body.lower-cuisine .lower-hero.js-reveal {
   }
 
   .site-nav a[href*="access"] {
-    margin-bottom: 12px;
+    margin-bottom: 0;
   }
 
   .site-nav a[href*="access"]::after {
     display: block;
-    margin-top: 18px;
-    color: rgba(255, 255, 255, 0.72);
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.78);
     font-size: 0.7rem;
     font-weight: 400;
     line-height: 1.9;
@@ -7971,6 +8092,10 @@ body:not(.lower-page) .contact-panel::before {
     font-size: 0.72rem;
   }
 
+  body:not(.lower-page) .news-table time {
+    color: #ffffff;
+  }
+
   body:not(.lower-page) .content-section.onsen {
     display: grid;
     grid-template-columns: 54px 1fr;
@@ -9584,13 +9709,15 @@ body:not(.lower-page) .contact-panel::before {
     max-width: calc(100vw - 56px) !important;
     height: auto !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 0 0 3em !important;
+    box-sizing: border-box !important;
     color: var(--ink) !important;
     font-size: 1.2rem !important;
     font-weight: 700 !important;
     line-height: 1.52 !important;
     letter-spacing: 0 !important;
     text-align: left !important;
+    text-indent: -3em !important;
     writing-mode: horizontal-tb !important;
     white-space: nowrap !important;
     transform: none !important;
@@ -9669,7 +9796,7 @@ body:not(.lower-page) .contact-panel::before {
   body:not(.lower-page) section#dining.content-section.dining .vertical-copy h2 {
     display: flex !important;
     flex-direction: column !important;
-    align-items: stretch !important;
+    align-items: flex-start !important;
     width: 100% !important;
     margin: 32px 0 18px !important;
     padding: 0 4px !important;
@@ -9697,8 +9824,16 @@ body:not(.lower-page) .contact-panel::before {
   }
 
   body:not(.lower-page) section#dining.content-section.dining .dining-copy-line-shift {
-    align-self: flex-end !important;
+    align-self: flex-start !important;
+    margin-left: 3em !important;
     margin-top: 2px !important;
+  }
+
+  body:not(.lower-page) section#dining.content-section.dining .dining-title-art {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    margin: -6px auto 0 !important;
+    transform: none !important;
   }
 }
 
@@ -9739,11 +9874,13 @@ body:not(.lower-page) .contact-panel::before {
 
   body:not(.lower-page) section#rooms.rooms .rooms-title-art {
     position: relative !important;
+    left: 0 !important;
     display: block !important;
     width: 118px !important;
     max-width: none !important;
     min-height: 0 !important;
-    margin: 0 auto !important;
+    align-self: flex-start !important;
+    margin: 0 0 0 calc(50% - 59px) !important;
     padding: 0 !important;
     transform: none !important;
   }
@@ -10170,27 +10307,11 @@ body:not(.lower-page) .contact-panel::before {
   }
 
   body:not(.lower-page) section#access.access .map-placeholder::before {
-    content: "";
-    position: absolute;
-    right: 34%;
-    bottom: 44px;
-    z-index: 2;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: #34312d;
+    content: none !important;
   }
 
   body:not(.lower-page) section#access.access .map-placeholder::after {
-    content: "";
-    position: absolute;
-    right: 10%;
-    bottom: 20px;
-    z-index: 3;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background: url("assets/img/07access/access_maplogo.png") center / contain no-repeat;
+    content: none !important;
   }
 
   body:not(.lower-page) section#access.access .access-bus {
@@ -10349,12 +10470,12 @@ body:not(.lower-page) .contact-panel::before {
   body:not(.lower-page) section#rooms.rooms .vertical-copy h2 {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     justify-content: flex-start !important;
     width: 100% !important;
     margin: 0 auto 24px !important;
-    padding: 0 !important;
-    text-align: center !important;
+    padding: 0 0 0 24px !important;
+    text-align: left !important;
     writing-mode: horizontal-tb !important;
     text-orientation: mixed !important;
     white-space: normal !important;
@@ -10364,11 +10485,15 @@ body:not(.lower-page) .contact-panel::before {
     display: block !important;
     width: max-content !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
     padding: 0 !important;
     writing-mode: horizontal-tb !important;
     text-orientation: mixed !important;
     white-space: nowrap !important;
+  }
+
+  body:not(.lower-page) section#rooms.rooms .vertical-copy h2 .room-copy-line:nth-child(2) {
+    margin-left: 3em !important;
   }
 }
 
@@ -12385,6 +12510,13 @@ body:not(.lower-page) #about .about-sp-catch-art {
   }
 }
 
+/* PCトップ FV：キャッチコピー画像の位置調整 */
+@media (min-width: 768px) {
+  body:not(.lower-page) .hero .hero-copy-art picture {
+    transform: translate(64px, 22px);
+  }
+}
+
 /* PCフッター：左側情報ブロックを画像カラムに対して上下中央へ戻す */
 @media (min-width: 768px) {
   .site-footer .footer-info {
@@ -12576,6 +12708,76 @@ body.lower-cuisine .lower-hero.js-reveal {
     width: 24px !important;
     background: var(--ink) !important;
   }
+
+  body:not(.lower-page) .site-header .nav-toggle.is-open,
+  body:not(.lower-page) .site-header.is-scrolled .nav-toggle.is-open {
+    position: fixed !important;
+    top: 30px !important;
+    right: 34px !important;
+    z-index: 120 !important;
+    place-items: center !important;
+  }
+
+  body:not(.lower-page) .site-header .nav-toggle.is-open span,
+  body:not(.lower-page) .site-header.is-scrolled .nav-toggle.is-open span {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 22px !important;
+    height: 2px !important;
+    background: #fff !important;
+    transform-origin: center !important;
+  }
+
+  body:not(.lower-page) .site-header .nav-toggle.is-open span:first-child,
+  body:not(.lower-page) .site-header.is-scrolled .nav-toggle.is-open span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg) !important;
+  }
+
+  body:not(.lower-page) .site-header .nav-toggle.is-open span:last-child,
+  body:not(.lower-page) .site-header.is-scrolled .nav-toggle.is-open span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg) !important;
+  }
+
+  body:not(.lower-page) .site-nav::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  body:not(.lower-page) .site-header .site-nav.is-open > a,
+  body:not(.lower-page) .site-header .site-nav.is-open .nav-parent,
+  body:not(.lower-page) .site-header .site-nav.is-open .nav-submenu a {
+    transition: color 0.2s ease, background-color 0.2s ease !important;
+  }
+
+  body:not(.lower-page) .site-header .site-nav.is-open > a:hover,
+  body:not(.lower-page) .site-header .site-nav.is-open .nav-parent:hover,
+  body:not(.lower-page) .site-header .site-nav.is-open .nav-submenu a:hover {
+    color: #d0a45f !important;
+    transform: none !important;
+  }
+
+  body:not(.lower-page) .site-header .site-nav.is-open .nav-dropdown:hover .nav-submenu,
+  body:not(.lower-page) .site-header .site-nav.is-open .nav-dropdown:focus-within .nav-submenu {
+    transform: none !important;
+  }
+
+  body.lower-page .site-header .site-nav.is-open > a,
+  body.lower-page .site-header .site-nav.is-open .nav-parent,
+  body.lower-page .site-header .site-nav.is-open .nav-submenu a {
+    transition: color 0.2s ease, background-color 0.2s ease !important;
+  }
+
+  body.lower-page .site-header .site-nav.is-open > a:hover,
+  body.lower-page .site-header .site-nav.is-open .nav-parent:hover,
+  body.lower-page .site-header .site-nav.is-open .nav-submenu a:hover {
+    transform: none !important;
+  }
+
+  body.lower-page .site-header .site-nav.is-open .nav-dropdown:hover .nav-submenu,
+  body.lower-page .site-header .site-nav.is-open .nav-dropdown:focus-within .nav-submenu {
+    transform: none !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12610,18 +12812,19 @@ body.lower-cuisine .lower-hero.js-reveal {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 45px;
+    gap: clamp(48px, 4.8vw, 68px);
     width: 100%;
+    margin-bottom: clamp(72px, 7.2vw, 104px);
   }
 
   body:not(.lower-page) .booking-banners .booking-banner {
     display: grid;
     place-items: center;
     box-sizing: border-box;
-    width: 290px;
-    height: 100px;
+    width: clamp(330px, 27vw, 390px);
+    height: clamp(112px, 9vw, 132px);
     min-height: 0;
-    padding: 20px;
+    padding: 22px 30px;
     overflow: hidden;
     background: #fff;
     border: 1px solid #aaa;
@@ -12643,11 +12846,37 @@ body.lower-cuisine .lower-hero.js-reveal {
   }
 
   body:not(.lower-page) .booking-banners .booking-banner--jaran .booking-banner__logo {
-    height: 54px;
+    height: clamp(64px, 5vw, 74px);
   }
 
-  body:not(.lower-page) .booking-banners .booking-banner--rakuten .booking-banner__logo {
-    height: 68px;
+body:not(.lower-page) .booking-banners .booking-banner--rakuten .booking-banner__logo {
+    height: clamp(78px, 6.2vw, 90px);
+  }
+}
+
+body:not(.lower-page) #about .about-sp-text {
+  display: none;
+}
+
+body:not(.lower-page) .top-sp-text {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  body:not(.lower-page) #about .about-pc-text {
+    display: none !important;
+  }
+
+  body:not(.lower-page) #about .about-sp-text {
+    display: block !important;
+  }
+
+  body:not(.lower-page) .top-pc-text {
+    display: none !important;
+  }
+
+  body:not(.lower-page) .top-sp-text {
+    display: block !important;
   }
 }
 
@@ -12655,19 +12884,167 @@ body.lower-cuisine .lower-hero.js-reveal {
 @media (min-width: 768px) {
   body:not(.lower-page) section#dining.content-section.dining {
     row-gap: 0;
-    padding-top: clamp(56px, 4.8vw, 82px);
-    padding-bottom: clamp(22px, 3vw, 46px);
+    padding-top: clamp(36px, 2.8vw, 52px);
+    padding-bottom: clamp(14px, 1.6vw, 24px);
   }
 
   body:not(.lower-page) section#dining.content-section.dining .vertical-copy h2 {
-    transform: translateY(74px);
+    margin-bottom: -144px;
+    transform: translateY(18px);
   }
 
   body:not(.lower-page) section#dining.content-section.dining .section-text {
-    margin-top: clamp(-88px, -4.8vw, -64px);
+    margin-top: clamp(-124px, -8vw, -96px);
   }
 
   body:not(.lower-page) section#dining.content-section.dining .section-text .text-button {
-    margin-top: clamp(24px, 2vw, 34px);
+    margin-top: clamp(14px, 1.2vw, 20px);
+  }
+}
+
+/* PCトップ 温泉セクション：縦位置と余白の最終調整 */
+@media (min-width: 768px) {
+  body:not(.lower-page) section#onsen.content-section.onsen {
+    row-gap: 0;
+    padding-top: clamp(54px, 4.6vw, 76px);
+    padding-bottom: clamp(34px, 3.6vw, 58px);
+  }
+
+  body:not(.lower-page) section#onsen.content-section.onsen .onsen-title {
+    transform: translateY(24px);
+  }
+
+  body:not(.lower-page) section#onsen.content-section.onsen .section-text {
+    transform: translateY(-158px);
+  }
+
+  body:not(.lower-page) section#onsen.content-section.onsen .section-text .text-button {
+    margin-top: clamp(20px, 1.8vw, 28px);
+  }
+}
+
+/* PCトップ 竹灯籠セクション：左本文量と下部余白の最終調整 */
+@media (min-width: 768px) {
+  body:not(.lower-page) section#lantern.lantern {
+    padding-top: clamp(74px, 6.5vw, 108px);
+    padding-bottom: clamp(34px, 3.6vw, 58px);
+  }
+
+  body:not(.lower-page) section#lantern.lantern .lantern-copy {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  body:not(.lower-page) section#lantern.lantern .lantern-copy h2 {
+    margin-bottom: clamp(58px, 5.8vw, 96px);
+  }
+
+  body:not(.lower-page) section#lantern.lantern .lantern-copy p {
+    max-width: 430px;
+    line-height: 2.28;
+  }
+
+  body:not(.lower-page) section#lantern.lantern .lantern-dots {
+    margin-top: 12px;
+  }
+}
+
+/* SP lower pages: remove the footer exterior image below footer info. */
+@media (max-width: 767px) {
+  body.lower-page .site-footer {
+    grid-template-rows: auto 34px !important;
+  }
+
+  body.lower-page .site-footer .footer-image {
+    display: none !important;
+  }
+
+  body.lower-page .site-footer .footer-copy {
+    grid-row: 2 !important;
+  }
+}
+
+/* SP footer clearance: keep copyright above the fixed reservation banner. */
+@media (max-width: 767px) {
+  body:not(.lower-page) .site-footer,
+  body.lower-page .site-footer {
+    padding-bottom: 58px !important;
+    background: #a79c8d !important;
+  }
+
+  body:not(.lower-page) .site-footer .footer-info,
+  body.lower-page .site-footer .footer-info {
+    background: #eee !important;
+  }
+
+  body:not(.lower-page) .site-footer .footer-copy,
+  body.lower-page .site-footer .footer-copy {
+    background: #a79c8d !important;
+  }
+
+  body:not(.lower-page) .footer-address,
+  body.lower-page .footer-address {
+    font-size: 0.72rem !important;
+    line-height: 1.8 !important;
+  }
+
+  body:not(.lower-page) .footer-nav,
+  body.lower-page .footer-nav {
+    align-items: flex-start !important;
+  }
+
+  body:not(.lower-page) .footer-nav a,
+  body.lower-page .footer-nav a {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* SP lower pages: use the same fixed reservation banner as the cuisine page. */
+@media (max-width: 767px) {
+  body.lower-page .reserve-tab {
+    position: fixed !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: auto !important;
+    top: auto !important;
+    z-index: 900 !important;
+    display: block !important;
+    width: min(72vw, 270px) !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  body.lower-page .reserve-tab::before,
+  body.lower-page .reserve-tab::after {
+    content: none !important;
+  }
+
+  body.lower-page .reserve-tab picture,
+  body.lower-page .reserve-tab img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+/* SP lower rooms/onsen: remove the paper background behind feature text only. */
+@media (max-width: 767px) {
+  body.lower-rooms .lower-feature-card::after,
+  body.lower-onsen .lower-feature-card::after {
+    display: none !important;
+    background: none !important;
+    background-image: none !important;
   }
 }

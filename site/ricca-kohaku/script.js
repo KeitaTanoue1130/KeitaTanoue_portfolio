@@ -15,6 +15,34 @@ const spSlideQuery = window.matchMedia("(max-width: 767px)");
 const isTopPage = !document.body.classList.contains("lower-page");
 const responsiveImages = document.querySelectorAll("img[data-sp-src]");
 const lowerSlideControllers = [];
+const reservationHash = "#reservation-links";
+const reservationTarget = document.querySelector(reservationHash);
+
+const scrollReservationLinksToCenter = (behavior = "smooth") => {
+  if (!reservationTarget) return;
+
+  const rect = reservationTarget.getBoundingClientRect();
+  const headerHeight = header && getComputedStyle(header).position === "fixed" ? header.getBoundingClientRect().height : 0;
+  const availableHeight = Math.max(1, window.innerHeight - headerHeight);
+  const targetCenter = rect.top + window.scrollY + rect.height / 2;
+  const nextTop = targetCenter - headerHeight - availableHeight / 2;
+  const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+
+  window.scrollTo({
+    top: Math.min(Math.max(0, nextTop), maxScroll),
+    behavior,
+  });
+};
+
+const syncReservationHashPosition = (behavior = "smooth") => {
+  if (window.location.hash !== reservationHash) return;
+
+  window.requestAnimationFrame(() => {
+    scrollReservationLinksToCenter(behavior);
+    window.setTimeout(() => scrollReservationLinksToCenter(behavior), 240);
+    window.setTimeout(() => scrollReservationLinksToCenter(behavior), 720);
+  });
+};
 
 responsiveImages.forEach((image) => {
   if (!image.dataset.pcSrc) image.dataset.pcSrc = image.getAttribute("src") || "";
@@ -100,6 +128,23 @@ nav.addEventListener("click", (event) => {
   navToggle.setAttribute("aria-expanded", "false");
 });
 
+if (isTopPage && reserveTab && reservationTarget) {
+  reserveTab.addEventListener("click", (event) => {
+    const url = new URL(reserveTab.getAttribute("href"), window.location.href);
+    if (url.hash !== reservationHash || url.pathname !== window.location.pathname) return;
+
+    event.preventDefault();
+    if (window.location.hash !== reservationHash) {
+      window.history.pushState(null, "", reservationHash);
+    }
+    syncReservationHashPosition("smooth");
+  });
+
+  window.addEventListener("hashchange", () => syncReservationHashPosition("smooth"));
+  window.addEventListener("load", () => syncReservationHashPosition("auto"));
+  syncReservationHashPosition("auto");
+}
+
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -109,7 +154,7 @@ if ("IntersectionObserver" in window) {
         revealObserver.unobserve(entry.target);
       });
     },
-    { rootMargin: "0px 0px -12% 0px", threshold: 0.16 },
+    { rootMargin: "0px 0px -4% 0px", threshold: 0.08 },
   );
 
   revealItems.forEach((item) => revealObserver.observe(item));

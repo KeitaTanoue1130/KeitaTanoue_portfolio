@@ -1,355 +1,497 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keita Tanoue Portfolio</title>
-    <!-- reset CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <!-- original CSS -->
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-
-    <!-- header -->
-    <header class="header-container">
-        <div class="header-logo">
-            <a href="index.html"><img src="./image/logo.webp" alt="ロゴ"></a>
-        </div>
-        <nav>
-            <ul class="header-nav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>銅山温泉 旅館「琥珀」</title>
+    <meta
+      name="description"
+      content="銅山温泉 旅館「琥珀」の公式サイト。雪見露天、竹灯籠、地産地消の料理、冬霞号で訪れる静かな湯宿。"
+    />
+    <link rel="stylesheet" href="styles.css?v=banner-box-1" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="銅山温泉 旅館 琥珀">
+        <img class="brand-logo-img" src="assets/img/01fv/logo3.webp" alt="銅山温泉 旅館 琥珀" />
+        <span class="brand-small">銅山温泉 旅館</span>
+        <span class="brand-main">琥珀</span>
+      </a>
+      <p class="header-tel">Tel.0123-456-7892　　チェックイン 15:00 / チェックアウト 10:00</p>
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" data-nav aria-label="グローバルナビゲーション">
+        <a href="#top">ホーム</a>
+        <a href="#about">当館について</a>
+        <span class="nav-dropdown">
+          <a class="nav-parent" href="rooms.html">お部屋</a>
+          <span class="nav-submenu" aria-label="お部屋メニュー">
+            <a href="rooms.html#tsubaki">離れ客室 椿</a>
+            <a href="rooms.html#kikyo">庭園客室 桔梗</a>
+            <a href="rooms.html#nadeshiko">和室客室 撫子</a>
+          </span>
+        </span>
+        <span class="nav-dropdown">
+          <a class="nav-parent" href="onsen.html">温泉</a>
+          <span class="nav-submenu" aria-label="温泉メニュー">
+            <a href="onsen.html#hanagasumi">花霞の湯</a>
+            <a href="onsen.html#yoibana">宵花の湯</a>
+            <a href="onsen.html#hyakka">百花の湯</a>
+          </span>
+        </span>
+        <span class="nav-dropdown">
+          <a class="nav-parent" href="cuisine.html">料理</a>
+          <span class="nav-submenu" aria-label="料理メニュー">
+            <a href="cuisine.html#kaiseki">旬の会席料理</a>
+            <a href="cuisine.html#breakfast">朝食</a>
+          </span>
+        </span>
+        <a href="#news">お知らせ</a>
+        <a href="#access">アクセス</a>
+      </nav>
     </header>
-
-    <!-- side nav PC -->
-    <nav class="side-nav">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <a class="reserve-tab" href="#reservation-links" aria-label="宿泊予約">
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/img/00other/sp_reserve.webp" />
+        <img src="assets/img/00other/icon_reserve1-2.webp" alt="ご宿泊予約 Reservation" />
+      </picture>
+    </a>
+    <nav class="firstview-menu" aria-label="ファーストビューナビゲーション">
+      <a href="#top" class="is-current">ホーム</a>
+      <a href="#about">当館について</a>
+      <span class="nav-dropdown">
+        <a class="nav-parent" href="rooms.html">お部屋</a>
+        <span class="nav-submenu" aria-label="お部屋メニュー">
+          <a href="rooms.html#tsubaki">離れ客室 椿</a>
+          <a href="rooms.html#kikyo">庭園客室 桔梗</a>
+          <a href="rooms.html#nadeshiko">和室客室 撫子</a>
+        </span>
+      </span>
+      <span class="nav-dropdown">
+        <a class="nav-parent" href="onsen.html">温泉</a>
+        <span class="nav-submenu" aria-label="温泉メニュー">
+          <a href="onsen.html#hanagasumi">花霞の湯</a>
+          <a href="onsen.html#yoibana">宵花の湯</a>
+          <a href="onsen.html#hyakka">百花の湯</a>
+        </span>
+      </span>
+      <span class="nav-dropdown">
+        <a class="nav-parent" href="cuisine.html">料理</a>
+        <span class="nav-submenu" aria-label="料理メニュー">
+          <a href="cuisine.html#kaiseki">旬の会席料理</a>
+          <a href="cuisine.html#breakfast">朝食</a>
+        </span>
+      </span>
+      <a href="#news">お知らせ</a>
+      <a href="#access">アクセス</a>
+      <a href="#reserve" class="firstview-reserve">ご宿泊予約</a>
     </nav>
 
-    <!-- hamburger SP -->
-    <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <nav class="sp-nav">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-
-    <!-- fv -->
-    <section class="fv">
-        <div class="fv-text">
-            <h2>
-                ECサイトの成果向上を意識した<br>
-                Web制作・改善提案を行っています
-            </h2>
-
-            <p>
-                ユーザー行動を意識し、デザイン・コーディング・改善提案を通して価値あるWebサイト制作を目指しています
-            </p>
+    <main id="top">
+      <section class="hero js-reveal">
+        <a class="firstview-logo" href="#top" aria-label="銅山温泉 旅館 琥珀">
+          <img src="assets/img/01fv/logo3.webp" alt="銅山温泉 旅館 琥珀" />
+        </a>
+        <div class="hero-frame">
+          <img src="assets/img/01fv/fv_kohaku.webp" alt="銅山温泉の街並みをイメージした旅館外観" />
         </div>
-    </section>
+        <p class="hero-copy hero-copy-art">
+          <picture>
+            <source media="(max-width: 767px)" srcset="assets/img/01fv/fv_cahtc_sp.png" />
+            <img src="assets/img/01fv/fv_catchy copy.png" alt="琥珀色の灯りに守られて、紡ぎ続ける山の朝。" />
+          </picture>
+        </p>
+      </section>
 
-    <div class="wrapper">
-        <!-- about -->
-        <section class="about" id="about">
-            <h2 class="main-heading">About</h2>
-            <ul class="about-container">
-                <li>
-                    <div>
-                        <img src="./image/saku.png" alt="">
-                    </div>
-                </li>
-                <li>
-                    <p>
-                        接客業および法律事務所での経験を通じて、相手のニーズを正確に捉える力を培ってきました。<br>
-                        現在は職業訓練校にてWeb制作を学び、コーディングスキルに加えて、ユーザーの行動を意識した改善提案にも取り組んでいます。
-                    </p>
-                </li>
-            </ul>
-        </section>
+      <section class="opening section-grid js-reveal" id="about">
+        <img class="about-sp-catch-art" src="assets/img/01fv/fv_cahtc_sp.png" alt="琥珀色の灯りに守られて、紡ぐ愛おしい刻。" />
+        <div class="about-left">
+          <img class="about-main-img" src="assets/img/02about/pc_about_family.webp" alt="客室で過ごす穏やかな時間のイメージ" data-sp-src="assets/img/02about/sp_about_family.webp" />
+          <h2>家族で過ごす贅沢な時間</h2>
+          <p>
+            <span class="about-pc-text">
+              扉を開ければ、そこは銅山温泉の静けさに包まれた、日常から優しく切り離された特別な世界。<br />
+              わずか13室だからこそ叶う、周囲を気にせずゆったりと過ごせる静かなひととき。<br />
+              やわらかな竹灯籠の灯りが彩る温泉旅館で<br />
+              お子様御膳やベビー・キッズ向け貸出品もご用意しております。<br />
+              伝統が息づく上質な佇まいの中で、小さなお子様との大切な時間を、どこよりも愛おしく、<br />
+              そして安心して紡いでいただけます。
+            </span>
+            <span class="about-sp-text">
+              扉を開ければ、日常から優しく切り離された静かな世界。<br />
+              わずか13室だからこそ叶う、ゆったりとしたひととき。<br />
+              名湯と旬の食、温かなもてなしに包まれながら、<br />
+              ご家族との大切な時間を安心してお過ごしいただけます。
+            </span>
+          </p>
+          <img class="about-wide-img" src="assets/img/02about/about_child01.webp" alt="くつろぎの客室をイメージした横長画像" />
+        </div>
+        <div class="about-right">
+          <h1 class="about-title-art"><img src="assets/img/02about/about_title.png" alt="銅山温泉 琥珀とは" data-sp-src="assets/img/02about/about_title_sp.png" /></h1>
+          <div class="about-overlap">
+            <img class="about-portrait-img" src="assets/img/02about/pc_about_taketourou.webp" alt="銅山温泉の夜をイメージした縦長画像" data-sp-src="assets/img/02about/sp_about_taketourou.webp" />
+            <img class="about-small-img" src="assets/img/02about/about_japaneseumbrella.webp" alt="竹灯籠をイメージした小さな横長画像" />
+          </div>
+          <p>
+            名湯に癒やされ、厳選された旬の食を囲む。<br />
+            「琥珀」という名にふさわしい、温かく気品あふれるおもてなしで、皆様をお迎えいたします。
+          </p>
+        </div>
+        <div class="about-thumbs" aria-label="琥珀のイメージ画像">
+          <img src="assets/img/02about/new_yukimiburo2.webp" alt="" />
+          <img src="assets/img/02about/about_sashimi.webp" alt="" />
+          <img src="assets/img/02about/about_sake.webp" alt="" />
+          <img src="assets/img/02about/about_gaikan.webp" alt="" />
+        </div>
+      </section>
 
-        <!-- skills -->
-        <section class="skills" id="skills">
+      <section class="features js-reveal" id="features">
+        <h2>琥珀の特徴</h2>
+        <div class="feature-list">
+          <a class="feature-card" href="#">
+            <span>01</span>
+            <h3>大正ロマンの建築</h3>
+            <p>別所温泉の宮大工が手がけた確かな技と、誇り高き心意気が息づく贅沢な空間。</p>
+            <img src="assets/img/02about/maru_gaikan_1.webp" alt="" />
+          </a>
+          <a class="feature-card" href="onsen.html">
+            <span>02</span>
+            <h3>源泉温泉</h3>
+            <p>豪雪の冬には息をのむ雪見風呂、夏には爽やかな涼風とともに、至福の湯浴みをご堪能ください。</p>
+            <img src="assets/img/02about/maru_about_yukimiburo10.webp" alt="" />
+          </a>
+          <a class="feature-card" href="#service">
+            <span>03</span>
+            <h3>お子様向けサービス</h3>
+            <p>お子様も安心してお過ごしいただけるようお子様用の貸出品もご用意しております。</p>
+            <img src="assets/img/02about/maru_about_child.webp" alt="" />
+          </a>
+          <a class="feature-card" href="#access">
+            <span>04</span>
+            <h3>アクセス</h3>
+            <p>山方空港からのシャトルバスをご用意しております。運転の心配なく安心してお越しいただけます。</p>
+            <img src="assets/img/02about/maru_fuyugasumigo.webp" alt="" />
+          </a>
+        </div>
+      </section>
 
-            <h2 class="main-heading">Skills</h2>
+      <section class="news js-reveal" id="news">
+        <h2>お知らせ</h2>
+        <div class="news-table">
+          <a href="#"><time>2026.05.01</time><span>楽天トラベルGW楽得キャンペーン開催中です。</span></a>
+          <a href="#"><time>2026.04.20</time><span>夜の竹灯籠ライトアップの様子を公開しました。</span></a>
+          <a href="#"><time>2026.04.15</time><span>公式ホームページを公開しました。</span></a>
+        </div>
+      </section>
 
-            <ul class="skills-list">
+      <section class="content-section onsen js-reveal" id="onsen">
+        <div class="vertical-copy onsen-title">
+          <h2 class="section-title-art onsen-title-art"><img src="assets/img/03onsen/onsen_title.png" alt="温泉 hot spring" /></h2>
+        </div>
+        <div class="overlap-visual visual-onsen">
+          <p class="onsen-catch">ぷくぷくと湧き出す<br />源泉湧き流しの湯。</p>
+          <img class="large" src="assets/img/03onsen/top_onsen1.webp" alt="雪山を望む露天風呂" />
+          <img class="small" src="assets/img/03onsen/top_onsen2.webp" alt="雪見露天風呂のイメージ" />
+        </div>
+        <div class="section-text">
+          <p>
+            四季折々の自然を望む露天風呂で、日々の疲れをゆっくりと癒やすひととき。
+            やわらかな湯と静かな空間が、ご夫婦はもちろん、お子様との大切な時間も優しく包み込みます。
+          </p>
+          <a class="text-button" href="onsen.html">詳細を見る</a>
+        </div>
+      </section>
 
-                <li>
-                    <h3>HTML / CSS</h3>
-                    <p>
-                        レスポンシブ対応を含めたWebサイトの構築が可能です。
-                        Flexbox・Gridを用いたレイアウト設計を行います。
-                    </p>
-                </li>
+      <section class="content-section dining js-reveal" id="dining">
+        <div class="vertical-copy">
+          <span class="section-title-art dining-title-art"><img src="assets/img/04food/food_title.png" alt="料理 cuisine" /></span>
+          <h2><span class="dining-copy-line">五感で味わえる</span><br /><span class="dining-copy-line dining-copy-line-shift">山方の味覚。</span></h2>
+        </div>
+        <div class="overlap-visual visual-dining">
+          <img class="large" src="assets/img/04food/pc_food1.webp" alt="山方の味覚を盛り込んだ会席料理" data-sp-src="assets/img/04food/sp_food1.webp" />
+          <img class="small" src="assets/img/04food/pc_food2.webp" alt="山の恵みを使った鍋料理" data-sp-src="assets/img/04food/sp_food2.webp" />
+          <img class="sp-dining-thumb" src="assets/img/04food/sp_food3.webp" alt="" />
+          <img class="sp-dining-thumb" src="assets/img/04food/sp_food4.webp" alt="" />
+        </div>
+        <div class="section-text">
+          <p>
+            地元山方県産の旬の食材を仕入れ、どこか懐かしい素朴な味わいと、
+            季節の調理にこだわった品々をぜひご堪能ください。
+          </p>
+          <a class="text-button" href="cuisine.html">詳細を見る</a>
+        </div>
+      </section>
 
-                <li>
-                    <h3>JavaScript</h3>
-                    <p>
-                        ユーザー体験を向上させるインタラクション実装が可能です。
-                        作品フィルターやフォームバリデーションを実装しています。
-                    </p>
-                </li>
+      <section class="rooms js-reveal" id="rooms">
+        <div class="vertical-copy">
+          <span class="section-title-art rooms-title-art"><img src="assets/img/05room/room_title.png" alt="お部屋 room" /></span>
+          <h2><span class="room-copy-line">四季の美しさを感じながら</span><span class="room-copy-line">心ほどけるひとときを。</span></h2>
+        </div>
+        <div class="room-cards">
+          <a href="rooms.html#tsubaki">
+            <img src="assets/img/05room/pc_room_tsubaki.webp" alt="椿 離れ貴賓室" data-sp-src="assets/img/05room/sp_room_tsubaki.webp" />
+            <h3>和室客室　椿</h3>
+          </a>
+          <a href="rooms.html#nadeshiko">
+            <img src="assets/img/05room/pc_room_nadeshiko.webp" alt="撫子 和室客室" data-sp-src="assets/img/05room/sp_room_nadeshiko.webp" />
+            <h3>和室客室　撫子</h3>
+          </a>
+          <a href="rooms.html#kikyo">
+            <img src="assets/img/05room/pc_room_kikyou.webp" alt="桔梗 庭園客室" data-sp-src="assets/img/05room/new_room3.webp" />
+            <h3>和室客室　桔梗</h3>
+          </a>
+        </div>
+        <div class="room-summary">
+          <p>
+            <span class="top-pc-text">
+              和の趣を大切にした客室は、それぞれ異なる魅力を備えています。窓の外に広がる自然や
+              静かな空間が、日常を忘れる癒やしの時間を演出します。旅の目的に合わせて、お好みのお部屋をお選びください。
+            </span>
+            <span class="top-sp-text">
+              和の趣を大切にした客室で、自然を眺めながら心ほどけるひとときを。
+              旅の目的に合わせて、お好みのお部屋をお選びください。
+            </span>
+          </p>
+          <a class="text-button" href="rooms.html">詳細を見る</a>
+        </div>
+      </section>
 
-                <li>
-                    <h3>Photoshop / Illustrator</h3>
-                    <p>
-                        バナーやビジュアル制作が可能です。
-                        視線誘導やレイアウトを意識したデザインを行います。
-                    </p>
-                </li>
+      <section class="service js-reveal" id="service">
+        <div class="service-copy">
+          <p class="round-title section-title-art kids-title-art"><img src="assets/img/08kids/kids_title.png" alt="お子様向けサービス kids service" /></p>
+          <h2>移ろう季節を<br />お子様と愛でる<br />やさしいおもてなし。</h2>
+          <p>
+            <span class="top-pc-text">
+              大切なお子様とのご旅行が、笑顔あふれる素敵な思い出になりますように。
+              館内にはゆっくり過ごせるキッズスペースをご用意しています。
+              絵本やおもちゃも揃えておりますので、どうぞ親子で楽しい時間をお過ごしください。
+              また、数に限りはございますが、お子様用の便利な貸出備品も取り揃えております。
+              ご希望のお客様は、どうぞ気兼ねなくスタッフまでお申し付けください。
+              <br />▼貸出備品<br />
+              ベビーカー、ベビー布団、ベビー毛布、キッズアメニティ、お子様用館内着
+            </span>
+            <span class="top-sp-text">
+              館内には、親子でゆっくり過ごせるキッズスペースをご用意しています。
+              お子様用の貸出備品もございますので、必要な際は気兼ねなくお声がけください。
+              <br />▼貸出備品<br />
+              ベビーカー、ベビー布団、キッズアメニティ、お子様用館内着
+            </span>
+          </p>
+        </div>
+        <div class="service-images">
+          <img src="assets/img/08kids/kids01.webp" alt="お子様向けキッズスペース" data-sp-src="assets/img/08kids/sp_kids01.webp" />
+          <img src="assets/img/08kids/kids02.webp" alt="お子様用アメニティ" />
+        </div>
+      </section>
 
-                <li>
-                    <h3>Premiere Pro</h3>
-                    <p>
-                        カット編集やテロップ作成、BGM・効果音の調整が可能です。
-                        紹介動画やショート動画の制作経験があります。
-                    </p>
-                </li>
+      <section class="lantern js-reveal" id="lantern">
+        <div class="lantern-copy">
+          <h2 data-lantern-title>竹灯籠</h2>
+          <p data-lantern-text>
+            銀山川沿いに並ぶ竹灯籠が、町並みと水辺をやさしく照らす夜。
+            昼間とは異なる静けさのなか、涼やかな川の流れと夜風に包まれて、温泉街はどこか幻想的な表情を見せます。
+            旅館で湯を楽しんだあとは、灯りをたどる散策へ。
+            季節ごとに変わる景色と光の印象が、旅の余韻をより深く心に残してくれます。
+          </p>
+        </div>
+        <div class="lantern-visual">
+          <div class="lantern-main">
+            <img class="lantern-main-img" src="assets/img/06kohaku/new_taketourou.webp" alt="竹灯籠ライトアップの仮画像" data-lantern-main />
+            <p class="lantern-catch" data-lantern-catch>四季と温泉が<br />織りなす<br />特別な時間。</p>
+          </div>
+          <div class="lantern-thumbs" aria-label="竹灯籠の季節写真">
+            <button
+              type="button"
+              data-lantern-thumb
+              data-src="assets/img/06kohaku/new_kohaku_fuki.webp"
+              data-alt="春の銅山温泉の山野草"
+              data-title="旬の山菜"
+              data-catch="春の芽吹きが<br />灯りにほどける<br />やさしい夜。"
+              data-text="桜や新緑が町並みに色を添える春。川沿いに灯る竹灯籠の光は、芽吹きの季節をやさしく照らし、湯のまちに穏やかな華やぎを運びます。夕食のあとに歩く春の夜道では、昼間とは違うやわらかな空気と、新しい季節の訪れを静かに感じていただけます。"
+            >
+              <img src="assets/img/06kohaku/new_kohaku_fuki.webp" alt="" />
+            </button>
+            <button
+              class="is-active"
+              type="button"
+              data-lantern-thumb
+              data-src="assets/img/06kohaku/new_taketourou.webp"
+              data-alt="竹灯籠ライトアップの仮画像"
+              data-title="竹灯籠"
+              data-catch="四季と温泉が<br />織りなす<br />特別な時間。"
+              data-text="銀山川沿いに並ぶ竹灯籠が、町並みと水辺をやさしく照らす夜。昼間とは異なる静けさのなか、涼やかな川の流れと夜風に包まれて、温泉街はどこか幻想的な表情を見せます。旅館で湯を楽しんだあとは、灯りをたどる散策へ。季節ごとに変わる景色と光の印象が、旅の余韻をより深く心に残してくれます。"
+            >
+              <img src="assets/img/06kohaku/new_taketourou.webp" alt="" />
+            </button>
+            <button
+              type="button"
+              data-lantern-thumb
+              data-src="assets/img/06kohaku/new_kohaku_aki.webp"
+              data-alt="秋の銅山温泉の紅葉"
+              data-title="紅葉"
+              data-catch="紅葉に染まる<br />湯のまちを<br />灯りと歩く。"
+              data-text="紅葉した木々と竹灯籠のあたたかな光が調和する秋。昼は山肌を染める色づきを眺め、夜は川面に映る灯りを楽しみながら、落ち着いた温泉街をゆっくり散策できます。深まりゆく季節の静けさが、旅館で過ごす時間にも穏やかな余韻を添えてくれます。"
+            >
+              <img src="assets/img/06kohaku/new_kohaku_aki.webp" alt="" />
+            </button>
+            <button
+              type="button"
+              data-lantern-thumb
+              data-src="assets/img/06kohaku/new_kohaku_fuyu.webp"
+              data-alt="冬の銅山温泉の雪景色"
+              data-title="雪景色"
+              data-catch="雪に包まれる<br />静かな湯宿の<br />白い時間。"
+              data-text="雪景色の中で竹灯籠の光がやわらかく浮かび上がる冬。白く包まれた町並みと湯けむりが重なり、温泉街らしい静けさとぬくもりを感じる夜が広がります。冷えた身体を湯でほどいたあとは、雪明かりに導かれるような散策をお楽しみください。"
+            >
+              <img src="assets/img/06kohaku/new_kohaku_fuyu.webp" alt="" />
+            </button>
+          </div>
+          <div class="lantern-dots" aria-hidden="true">
+            <button type="button" data-lantern-dot></button>
+            <button class="is-active" type="button" data-lantern-dot></button>
+            <button type="button" data-lantern-dot></button>
+            <button type="button" data-lantern-dot></button>
+          </div>
+        </div>
+      </section>
 
-            </ul>
-
-            <!-- 強み -->
-
-            <div class="strength-box">
-
-                <h3>強み</h3>
-
-                <p>
-                    ユーザー行動を意識した改善提案ができます。
-                    接客業や法務事務所での経験を活かし、
-                    相手の課題やニーズを整理しながら制作に取り組んでいます。
-                    制作だけでなく、導線設計やUI改善の視点を持ちながら
-                    Webサイト制作を行っています。
-                </p>
-
+      <section class="access js-reveal" id="access">
+        <div class="access-routes">
+          <div class="route-block">
+            <p class="route-title">&lt;自家用車でお越しの方&gt;</p>
+            <div class="route-flow">
+              <span>大正マロン館</span>
+              <small>路線バス（10分）</small>
+              <span>銅山温泉街</span>
+              <small>徒歩（10分）</small>
+              <span>旅館「琥珀」</span>
             </div>
-
-            <!-- 現在学習中 -->
-
-            <div class="learning-box">
-
-                <h3>現在学習中</h3>
-
-                <ul class="learning-list">
-                    <li>Figma</li>
-                    <li>Canva</li>
-                    <li>Git / GitHub</li>
-                    <li>SEO</li>
-                    <li>Google Analytics 4</li>
-                    <li>WordPress</li>
-                    <li>AI活用</li>
-                </ul>
-
-            </div>
-
-        </section>
-
-        <!-- works -->
-        <section class="works" id="works">
-
-            <h2 class="main-heading">Works</h2>
-
-            <div class="work-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="movie">Movie</button>
-                <button class="filter-btn" data-filter="graphic">Graphic</button>
-            </div>
-
-            <p class="work-note">
-                Click image for details
+            <p>
+              銅山温泉街は景観保護のため、宿周辺への車の乗り入れを制限しています。
+              お車でお越しの際は、大正マロン館駐車場をご利用ください。
+              駐車場からは路線バスをご利用のうえ、銅山温泉街から徒歩にて当館までお越しいただけます。
+              ご宿泊のお客様には、チェックイン時に無料チケットをお渡しします。
             </p>
+          </div>
+          <div class="route-block">
+            <p class="route-title">&lt;飛行機でお越しの方&gt;</p>
+            <div class="route-flow">
+              <span>山方空港</span>
+              <small>冬霞号<br />約1時間（予約制）</small>
+              <span>銅山温泉街</span>
+              <small>徒歩（10分）</small>
+              <span>旅館「琥珀」</span>
+            </div>
+            <p>
+              山方空港から専用のシャトルバス「冬霞（ふゆがすみ）号」を運行しています。
+              前日までのご予約制です。ご宿泊予定のお客様は、お電話にてご予約をお願いいたします。
+            </p>
+          </div>
+          <div class="timetable-group" aria-label="冬霞号 時刻表">
+            <table>
+              <caption>迎え時刻表</caption>
+              <thead>
+                <tr><th>山方空港発</th><th>銅山温泉街着</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>13:00</td><td>14:00</td></tr>
+                <tr><td>15:00</td><td>16:00</td></tr>
+                <tr><td>17:00</td><td>18:00</td></tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>送り時刻表</caption>
+              <thead>
+                <tr><th>銅山温泉発</th><th>山方空港着</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>8:00</td><td>9:00</td></tr>
+                <tr><td>10:00</td><td>11:00</td></tr>
+                <tr><td>12:00</td><td>13:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="access-info">
+          <p class="round-title section-title-art access-title-art"><img src="assets/img/07access/access_title.png" alt="交通案内 access" /></p>
+          <div class="access-map-wrap">
+            <div class="map-placeholder" aria-label="旅館の位置を示した日本地図"></div>
+            <img class="access-bus" src="assets/img/07access/huyugasumigo.webp" alt="冬霞号" />
+          </div>
+        </div>
+        <iframe
+          class="access-google-map"
+          title="創造社リカレントスクール福岡校 周辺地図"
+          src="https://www.google.com/maps?q=%E5%89%B5%E9%80%A0%E7%A4%BE%E3%83%AA%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%88%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB%E7%A6%8F%E5%B2%A1%E6%A0%A1&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
 
-            <ul class="work-list">
+      <section class="reserve js-reveal" id="reserve">
+        <div class="booking-banners" id="reservation-links" aria-label="宿泊予約バナー">
+          <a class="booking-banner booking-banner--jaran" href="#" aria-label="じゃらんの予約ページ">
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/img/09banner/banner_jaran_sp_trim.webp" />
+              <img class="booking-banner__logo" src="assets/img/09banner/banner_jaran01.png" alt="じゃらん予約バナー" />
+            </picture>
+          </a>
+          <a class="booking-banner booking-banner--rakuten" href="#" aria-label="楽天トラベルの予約ページ">
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/img/09banner/banner_rakuten_sp_trim.webp" />
+              <img class="booking-banner__logo" src="assets/img/09banner/banner_rakuten01.png" alt="楽天トラベル予約バナー" />
+            </picture>
+          </a>
+        </div>
 
-                <li class="work-item" data-category="web">
-                    <a href="./ricca_kohaku.html">
-                        <div class="work-thumb">
-                            <img src="./work/web/ricca-kohaku/ricca-kohaku-thumb.webp" alt="旅館 琥珀 公式Webサイト">
-                        </div>
-                        <p>旅館 琥珀 Webサイト(グループ制作 AI活用)</p>
-                    </a>
-                </li>
+        <div class="contact-panel">
+          <h2>お問い合わせ</h2>
+          <p>ご質問・ご予約・ご要望など、お気軽にお問い合わせください。</p>
+          <form class="contact-form" action="#" method="post">
+            <label>
+              <span>お名前 <em>必須</em></span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>メールアドレス <em>必須</em></span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>ご意見・ご要望 <em>必須</em></span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit">送信する＞</button>
+          </form>
+        </div>
+      </section>
+    </main>
 
-                <li class="work-item" data-category="web">
-                    <a href="./hakata_hiyori.html">
-                        <div class="work-thumb">
-                            <img src="./work/web/hakata-hiyori/hakata-hiyori-thumb.png" alt="博多ひより 食品ギフトEC LP">
-                        </div>
-                        <p>博多ひより 食品ギフトEC LP(AI活用)
-                        </p>
-                    </a>
-                </li>
-
-                <li class="work-item" data-category="web">
-                    <a href="./gyoza.html">
-                        <div class="work-thumb">
-                            <img src="./work/web/mokup/gyoza_mokup_thumb.gif" alt="ふくおか餃子FES LP">
-                        </div>
-                        <p>ふくおか餃子FES LP（グループ制作）</p>
-                    </a>
-                </li>
-
-
-                <li class="work-item" data-category="movie">
-                    <a href="./web_introduce.html">
-                        <div class="work-thumb">
-
-                            <img src="./work/movie/Web_thumb.png" alt="" class="thumb">
-
-                            <video class="hover-video" muted loop playsinline preload="none">
-                                <source src="./work/movie/Web_mov.mp4" type="video/mp4">
-                            </video>
-
-                        </div>
-                        <p>Web業界紹介動画（グループ制作）</p>
-                    </a>
-                </li>
-
-                <li class="work-item" data-category="movie">
-                    <a href="./gym_pr.html">
-                        <div class="work-thumb">
-
-                            <img src="./work/movie/short_thumb.jpeg" alt="" class="thumb">
-
-                            <video class="hover-video" muted loop playsinline preload="none">
-                                <source src="./work/movie/short_thumb.mp4" type="video/mp4">
-                            </video>
-
-                        </div>
-                        <p>ジムPR short動画</p>
-                    </a>
-                </li>
-
-                
-                <li class="work-item" data-category="web">
-                    <a href="./work_cafe.html">
-                        <div class="work-thumb">
-                            <img src="./work/web/mokup/cafe_mokup_thumb.gif" alt="">
-                        </div>
-                        <p>カフェサイト</p>
-                    </a>
-                </li>
-
-
-                <li class="work-item" data-category="graphic">
-                    <a href="./tomato_bunner.html">
-                        <div class="work-thumb graphic-thumb">
-                            <img src="./work/banner/akanosyukan.jpg" alt="">
-                        </div>
-                        <p>トマトジュースPRバナー</p>
-                    </a>
-                </li>
-
-
-                <li class="work-item" data-category="graphic">
-                    <a href="./namonaki.html">
-                        <div class="work-thumb graphic-thumb">
-                            <img src="./work/flyer/namonaki.jpg" alt="">
-                        </div>
-                        <p>サンドイッチ屋ポスター</p>
-                    </a>
-                </li>
-
-
-                <li class="work-item" data-category="movie">
-                    <a href="./tacos.html">
-                        <div class="work-thumb">
-
-                            <img src="./work/movie/tacos_thumb.png" alt="" class="thumb">
-
-                            <video class="hover-video" muted loop playsinline preload="none">
-                                <source src="./work/movie/tacos_mov.mp4" type="video/mp4">
-                            </video>
-
-                        </div>
-                        <p>How To Make TACOS</p>
-                    </a>
-                </li>
-
-
-                <li class="work-item" data-category="graphic">
-                    <a href="./syunkikousyu.html">
-                        <div class="work-thumb graphic-thumb">
-                            <img src="./work/banner/syunkikousyu.jpeg" alt="">
-                        </div>
-                        <p>春季講習女性向け</p>
-                    </a>
-                </li>
-
-                <li class="work-item" data-category="web">
-                    <a href="./bicycle.html">
-                        <div class="work-thumb">
-                            <img src="./work/web/mokup/bicycle_mokup_thumb.gif" alt="">
-                        </div>
-                        <p>サイクリングショップ</p>
-                    </a>
-                </li>
-
-            </ul>
-
-        </section>
-
-
-    </div>
-
-
-
-    <footer>
-        <!-- contact -->
-        <section class="contact" id="contact">
-            <h2 class="main-heading">Contact</h2>
-
-            <form id="contact-form" class="contact-form">
-
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name">
-                    <p class="error-message" id="name-error"></p>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
-                    <p class="error-message" id="email-error"></p>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message"></textarea>
-                </div>
-
-                <button type="submit">
-                    Send
-                </button>
-
-            </form>
-        </section>
+    <footer class="site-footer">
+      <div class="footer-info">
+        <p class="footer-logo"><span>銅山温泉 旅館</span>琥珀</p>
+        <p class="footer-address">〒998-1234　山方県御花畑市銅山 1-2-3<br />Tel 0123-45-6789</p>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <a href="#top">ホーム</a>
+          <a href="#about">当館について</a>
+          <a href="rooms.html">お部屋</a>
+          <a href="onsen.html">温泉</a>
+          <a href="cuisine.html">料理</a>
+          <a href="#news">お知らせ</a>
+          <a href="#access">アクセス</a>
+        </nav>
+        <div class="footer-links">
+          <a href="#">よくあるご質問</a>
+          <a href="#reserve">宿泊予約</a>
+          <a href="#reserve">お問い合わせ</a>
+        </div>
+      </div>
+      <img class="footer-image" src="assets/img/00other/footer_mainimage.webp" alt="夜の旅館外観の仮画像" />
+      <p class="footer-copy">© 2026 DOUZAN Kohaku.</p>
     </footer>
 
-    <!-- script -->
-    <script src="./js/script.js"></script>
-</body>
-
+    <script src="script.js?v=reservation-links-center"></script>
+  </body>
 </html>
+

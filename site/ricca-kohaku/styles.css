@@ -9713,7 +9713,7 @@ body:not(.lower-page) .contact-panel::before {
     box-sizing: border-box !important;
     color: var(--ink) !important;
     font-size: 1.2rem !important;
-    font-weight: 700 !important;
+    /* font-weight: 700 !important; */
     line-height: 1.52 !important;
     letter-spacing: 0 !important;
     text-align: left !important;
@@ -9802,7 +9802,7 @@ body:not(.lower-page) .contact-panel::before {
     padding: 0 4px !important;
     color: var(--ink) !important;
     font-size: 1.2rem !important;
-    font-weight: 700 !important;
+    /* font-weight: 700 !important; */
     line-height: 1.55 !important;
     letter-spacing: 0 !important;
     text-align: left !important;
@@ -9899,7 +9899,7 @@ body:not(.lower-page) .contact-panel::before {
     padding: 0 !important;
     color: var(--ink) !important;
     font-size: 1.18rem !important;
-    font-weight: 700 !important;
+    /* font-weight: 700 !important; */
     line-height: 1.72 !important;
     letter-spacing: 0 !important;
     text-align: center !important;
@@ -10084,7 +10084,7 @@ body:not(.lower-page) .contact-panel::before {
     padding: 0 !important;
     color: var(--ink) !important;
     font-size: 1.12rem !important;
-    font-weight: 700 !important;
+    /* font-weight: 700 !important; */
     line-height: 1.58 !important;
     letter-spacing: 0 !important;
     text-align: left !important;
@@ -12821,13 +12821,20 @@ body.lower-cuisine .lower-hero.js-reveal {
     display: grid;
     place-items: center;
     box-sizing: border-box;
-    width: clamp(330px, 27vw, 390px);
-    height: clamp(112px, 9vw, 132px);
+    width: clamp(370px, 30vw, 430px);
+    height: clamp(126px, 10vw, 146px);
     min-height: 0;
-    padding: 22px 30px;
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid #aaa;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    transition: none;
+  }
+
+  body:not(.lower-page) .booking-banners .booking-banner:hover .booking-banner__logo {
+    filter: drop-shadow(0 12px 18px rgba(58, 48, 36, 0.16));
+    transform: translateY(-3px);
   }
 
   body:not(.lower-page) .booking-banners .booking-banner picture {
@@ -12843,14 +12850,17 @@ body.lower-cuisine .lower-hero.js-reveal {
     max-width: 100%;
     min-height: 0;
     object-fit: contain;
+    transition:
+      filter 0.28s ease,
+      transform 0.28s ease;
   }
 
   body:not(.lower-page) .booking-banners .booking-banner--jaran .booking-banner__logo {
-    height: clamp(64px, 5vw, 74px);
+    height: clamp(112px, 5.8vw, 86px);
   }
 
 body:not(.lower-page) .booking-banners .booking-banner--rakuten .booking-banner__logo {
-    height: clamp(78px, 6.2vw, 90px);
+    height: clamp(112px, 7vw, 104px);
   }
 }
 
@@ -13046,5 +13056,33 @@ body:not(.lower-page) .top-sp-text {
     display: none !important;
     background: none !important;
     background-image: none !important;
+  }
+}
+
+/* SP版TOPページ：キャッチコピーの太字を解除 */
+@media (max-width: 767px) {
+  body:not(.lower-page) #about .about-left h2,
+  body:not(.lower-page) #onsen .onsen-catch,
+  body:not(.lower-page) #dining .vertical-copy h2,
+  body:not(.lower-page) #rooms .vertical-copy h2,
+  body:not(.lower-page) #service .service-copy h2 {
+    font-weight: 400 !important;
+  }
+}
+
+/* SPトップ 本文幅の統一：温泉・竹灯籠の中央寄りを他セクションに合わせる */
+@media (max-width: 767px) {
+  body:not(.lower-page) section#onsen .section-text {
+    width: calc(100vw - 64px) !important;
+    max-width: none !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  body:not(.lower-page) section#lantern.lantern .lantern-copy p {
+    width: 100% !important;
+    max-width: none !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }

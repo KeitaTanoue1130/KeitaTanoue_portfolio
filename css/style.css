@@ -704,6 +704,196 @@ textarea {
     line-height: 1.9;
 }
 
+/* 博多ひより AI制作ケーススタディ */
+.ai-case-study {
+    max-width: 900px;
+}
+
+.ai-case-hero {
+    max-width: 760px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.ai-case-hero h1 {
+    margin-bottom: 18px;
+}
+
+.ai-case-eyebrow,
+.ai-case-section-label {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.ai-case-badge {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 6px 14px;
+    border: 1px solid #999;
+    border-radius: 999px;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ai-case-hero .work-lead {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.ai-case-copy {
+    max-width: 760px;
+}
+
+.ai-case-copy p,
+.ai-section-intro,
+.ai-purpose-list li,
+.ai-workflow-list p,
+.ai-findings-list span,
+.ai-check-list li {
+    line-height: 1.9;
+}
+
+.ai-case-copy p + p {
+    margin-top: 18px;
+}
+
+.ai-purpose-list,
+.ai-findings-list,
+.ai-check-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.ai-purpose-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ai-purpose-list li,
+.ai-findings-list li,
+.ai-check-list li {
+    position: relative;
+    padding: 16px 18px 16px 42px;
+    background: #f7f7f7;
+    border-radius: 8px;
+}
+
+.ai-purpose-list li::before,
+.ai-check-list li::before {
+    content: "✓";
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    color: #4A90E2;
+    font-weight: 700;
+}
+
+.ai-production-info {
+    margin: 56px 0;
+}
+
+.ai-production-info .work-info-list dt {
+    width: 140px;
+}
+
+.ai-workflow-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+    counter-reset: ai-workflow;
+}
+
+.ai-workflow-list li {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 14px;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    counter-increment: ai-workflow;
+}
+
+.ai-workflow-list li::before {
+    content: counter(ai-workflow, decimal-leading-zero);
+    color: #4A90E2;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.ai-workflow-list h3 {
+    margin: 0 0 8px;
+}
+
+.ai-workflow-list p {
+    margin: 0;
+}
+
+.ai-findings-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ai-findings-list li {
+    padding-left: 18px;
+}
+
+.ai-findings-list strong,
+.ai-findings-list span {
+    display: block;
+}
+
+.ai-findings-list strong {
+    margin-bottom: 6px;
+}
+
+.ai-check-list {
+    grid-template-columns: 1fr;
+}
+
+.ai-version-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.ai-version-grid article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.ai-version-grid article.is-current {
+    border-color: #4A90E2;
+    background: rgba(74, 144, 226, 0.06);
+}
+
+.ai-version-grid span,
+.ai-version-grid small {
+    color: #666;
+    font-size: 12px;
+}
+
+.ai-version-grid strong {
+    line-height: 1.6;
+}
+
+.work-actions .secondary-action {
+    margin-left: 10px;
+    border: 1px solid #333;
+    color: #333;
+    background: #fff;
+}
+
 .proposal-flow,
 .proposal-grid {
     display: grid;
@@ -1247,6 +1437,34 @@ textarea {
 
     .case-study-hero .work-lead {
         text-align: center;
+    }
+
+    .ai-case-hero {
+        margin-bottom: 44px;
+    }
+
+    .ai-case-hero .work-lead {
+        text-align: center;
+    }
+
+    .ai-purpose-list,
+    .ai-workflow-list,
+    .ai-findings-list,
+    .ai-version-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-production-info .work-info-list div {
+        display: block;
+    }
+
+    .ai-production-info .work-info-list dt {
+        width: auto;
+        margin-bottom: 6px;
+    }
+
+    .work-actions .secondary-action {
+        margin: 10px 0 0;
     }
 
     .case-study-section {

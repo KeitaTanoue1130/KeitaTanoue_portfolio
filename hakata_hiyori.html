@@ -13,8 +13,9 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博多ひより | Portfolio</title>
-    <link rel="stylesheet" href="./css/style.css?v=hakata-hiyori-20260628">
+    <title>博多ひより | AI活用による短時間Web制作</title>
+    <meta name="description" content="Codexへ要件や修正内容を指示し、コードを直接記述せず約2時間で制作した食品ギフトECランディングページのケーススタディです。">
+    <link rel="stylesheet" href="./css/style.css?v=hakata-hiyori-20260723">
 </head>
 
 <body>
@@ -32,14 +33,32 @@
         </nav>
     </header>
 
-    <div class="wrapper">
-        <section class="work-detail ai-work-detail">
-            <h1>博多ひより 食品ギフトEC LP</h1>
+    <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="sp-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-            <p class="work-lead">
-                福岡のEC企業への応募を想定し、架空ブランド「博多ひより」の博多しめんたいギフトLPを制作しました。
-                地域商材の魅力、ギフト需要、購入前の不安解消、スマホでの購入導線を意識したEC改善提案型の作品です。
-            </p>
+    <nav class="sp-nav" id="sp-menu" aria-label="スマートフォン用ナビゲーション" aria-hidden="true">
+        <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#works">Works</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <main class="work-detail ai-work-detail ai-case-study">
+            <section class="ai-case-hero">
+                <p class="ai-case-eyebrow">AI Workflow Case Study</p>
+                <h1>博多ひより 食品ギフトEC LP</h1>
+                <span class="ai-case-badge">AI活用による短時間Web制作</span>
+                <p class="work-lead">
+                    Codexへ目的・構成・デザインの方向性を指示し、コードを直接記述せず、
+                    約2時間で食品ギフトECのランディングページを制作した実証作品です。
+                </p>
+            </section>
 
             <div class="work-visual single-visual">
                 <a href="./site/hakata-hiyori/index.html" target="_blank" rel="noopener" class="mockup-link">
@@ -47,79 +66,129 @@
                 </a>
             </div>
 
-            <div class="work-summary">
-                <h2>制作概要</h2>
+            <section class="work-section ai-overview">
+                <p class="ai-case-section-label">Project Overview</p>
+                <h2>Project Overview</h2>
+                <div class="ai-case-copy">
+                    <p>
+                        本作品は、生成AIのCodexを活用し、少ない人的リソースと短い制作時間でWebサイトを構築するワークフローを検証したものです。本人はコードを直接記述せず、サイトの目的、構成、デザインの方向性をCodexへ指示し、生成結果を確認しながら約2時間で完成させました。
+                    </p>
+                    <p>
+                        AIによる実装を待つ間には別の作業も進められるため、人が制作作業へ拘束される時間を抑えながら、一定品質のWebサイトを形にできる可能性を確認しました。
+                    </p>
+                    <p>
+                        単なる自動生成ではなく、目的と要件をAIへ伝え、確認と追加指示を重ねて成果物として完成させる「AIディレクション」と制作効率化をテーマにしています。
+                    </p>
+                </div>
+            </section>
+
+            <section class="work-section">
+                <p class="ai-case-section-label">Project Goals</p>
+                <h2>制作目的</h2>
+                <ul class="ai-purpose-list">
+                    <li>生成AIをWeb制作へ活用した場合の制作速度を検証する</li>
+                    <li>本人がコードを直接記述しない制作フローを試す</li>
+                    <li>人が制作作業へ拘束される時間を抑える</li>
+                    <li>少ない人的リソースで一定品質のサイトを制作する</li>
+                    <li>AIへ適切な指示を与え、成果物を完成まで導く力を示す</li>
+                </ul>
+            </section>
+
+            <section class="work-summary ai-production-info">
+                <h2>制作情報</h2>
                 <dl class="work-info-list">
                     <div>
-                        <dt>目的</dt>
-                        <dd>福岡のEC・通販系企業に向けて、商品訴求と購入導線を考えたLP制作ができることを示すため。</dd>
+                        <dt>作品</dt>
+                        <dd>食品ギフトECランディングページ</dd>
                     </div>
                     <div>
-                        <dt>想定商材</dt>
-                        <dd>博多しめんたいギフト / 税込4,980円 / 送料無料 / のし対応 / 冷凍配送</dd>
+                        <dt>制作時間</dt>
+                        <dd>約2時間</dd>
+                    </div>
+                    <div>
+                        <dt>制作方法</dt>
+                        <dd>Codexへの指示によるAI実装</dd>
+                    </div>
+                    <div>
+                        <dt>本人の担当</dt>
+                        <dd>要件設定、方向性の指示、生成結果の確認</dd>
+                    </div>
+                    <div>
+                        <dt>直接のコード記述</dt>
+                        <dd>なし</dd>
                     </div>
                     <div>
                         <dt>使用技術</dt>
-                        <dd>HTML / CSS / JavaScript / 生成AIによる商品画像作成</dd>
+                        <dd>HTML / CSS / JavaScript</dd>
                     </div>
                     <div>
-                        <dt>実装機能</dt>
-                        <dd>商品タブ、レビュー絞り込み、数量変更、合計金額表示、FAQ、カート追加風モーダル</dd>
+                        <dt>使用AI</dt>
+                        <dd>Codex</dd>
                     </div>
                 </dl>
-            </div>
-
-            <section class="work-section">
-                <h2>課題設定</h2>
-                <div class="proposal-flow">
-                    <article>
-                        <span>01 Target</span>
-                        <h3>福岡らしいギフトを探す人</h3>
-                        <p>お中元、内祝い、帰省土産など、失敗しにくい地域食品ギフトをスマホで探すユーザーを想定しました。</p>
-                    </article>
-                    <article>
-                        <span>02 Concern</span>
-                        <h3>食品ECの不安を減らす</h3>
-                        <p>配送、保存方法、賞味期限、辛さ、ギフト対応など、購入前に気になる情報を先回りして整理しました。</p>
-                    </article>
-                    <article>
-                        <span>03 Action</span>
-                        <h3>購入まで迷わせない</h3>
-                        <p>価格、数量、合計金額、カート追加を近くに配置し、スマホでも行動しやすい導線を意識しました。</p>
-                    </article>
-                </div>
             </section>
 
             <section class="work-section">
-                <h2>工夫した点</h2>
-                <div class="proposal-grid">
-                    <article>
-                        <h3>親しみやすい福岡感</h3>
-                        <p>高級感に寄せすぎず、家庭の食卓や季節の贈り物を想像しやすい色・写真・コピーにしました。</p>
-                    </article>
-                    <article>
-                        <h3>ECらしい判断材料</h3>
-                        <p>レビュー、配送情報、FAQ、ギフト対応を配置し、購入前の比較・検討に必要な情報をまとめています。</p>
-                    </article>
-                    <article>
-                        <h3>JavaScriptで購買体験を表現</h3>
-                        <p>数量変更、合計金額表示、商品切り替え、レビュー絞り込みを実装し、静的LPでもECの体験を見せています。</p>
-                    </article>
-                </div>
+                <p class="ai-case-section-label">Workflow</p>
+                <h2>AI活用の制作フロー</h2>
+                <ol class="ai-workflow-list">
+                    <li><div><h3>目的と方向性を決定</h3><p>食品ギフトECのランディングページとして、サイトの目的と目指す方向性を整理しました。</p></div></li>
+                    <li><div><h3>Codexへ要件を指示</h3><p>必要な構成、掲載内容、デザインイメージを言語化して伝えました。</p></div></li>
+                    <li><div><h3>HTML・CSS・JavaScriptを実装</h3><p>Codexが要件にもとづいて各ファイルを生成・実装しました。</p></div></li>
+                    <li><div><h3>ブラウザーで結果を確認</h3><p>生成されたページを確認し、意図との違いや修正が必要な箇所を整理しました。</p></div></li>
+                    <li><div><h3>追加指示を行い完成</h3><p>必要な修正内容をCodexへ伝え、生成結果を確認しながら完成まで進行しました。</p></div></li>
+                </ol>
             </section>
 
             <section class="work-section">
-                <h2>AI活用</h2>
-                <p>
-                    商品企画、ターゲット整理、訴求軸、LP構成、コピー、商品画像生成、実装補助にAIを活用しました。
-                    単に画像を作るだけでなく、ECサイトで必要な情報設計を短時間で形にすることを目的にしています。
-                </p>
+                <p class="ai-case-section-label">What This Project Demonstrates</p>
+                <h2>この作品で示したこと</h2>
+                <ul class="ai-findings-list">
+                    <li><strong>コードを直接入力せず制作</strong><span>本人が要件と方向性を示し、Codexへの指示によって実装しました。</span></li>
+                    <li><strong>約2時間で初期版を完成</strong><span>短時間で食品ギフトECのLPを形にする制作フローを実証しました。</span></li>
+                    <li><strong>拘束時間を抑えた進行</strong><span>AIの実装中には、本人が別の作業へ時間を使うことができました。</span></li>
+                    <li><strong>少ない人的リソースで制作</strong><span>実装作業をAIへ任せ、確認と判断に人の時間を配分しました。</span></li>
+                    <li><strong>AIディレクション</strong><span>目的や要件を言語化し、追加指示によって完成まで制作を進行しました。</span></li>
+                </ul>
+            </section>
+
+            <section class="work-section">
+                <p class="ai-case-section-label">Current Challenges</p>
+                <h2>現時点での課題</h2>
+                <p class="ai-section-intro">現在は、AIを活用して短時間で制作した初期版です。完成度を判断するための検証は、今後の工程として整理しています。</p>
+                <ul class="ai-check-list">
+                    <li>詳細なユーザー検証やアクセス解析は未実施</li>
+                    <li>UI・UX、SEO、アクセシビリティ、表示速度は今後検証予定</li>
+                    <li>レスポンシブ表示について、複数端末での追加確認が必要</li>
+                    <li>人間の判断と追加指示によって、AI生成物をどこまで改善できるかを今後検証する</li>
+                </ul>
+            </section>
+
+            <section class="work-section">
+                <p class="ai-case-section-label">Next Action</p>
+                <h2>今後のブラッシュアップ</h2>
+                <ul class="ai-check-list">
+                    <li>AIによる初期制作版をレビューする</li>
+                    <li>UI・UX上の課題を整理する</li>
+                    <li>SEO、アクセシビリティ、レスポンシブ表示を確認する</li>
+                    <li>課題に応じた改善指示をCodexへ与える</li>
+                    <li>修正前と修正後を比較し、改善工程を記録する</li>
+                </ul>
+
+                <div class="ai-version-grid" aria-label="今後の制作バージョン">
+                    <article class="is-current"><span>Version 1</span><strong>AIを活用した初期制作</strong><small>実施済み</small></article>
+                    <article><span>Version 2</span><strong>人間によるレビューとAIへの改善指示</strong><small>未実施・今後の予定</small></article>
+                    <article><span>Version 3</span><strong>検証結果を反映した追加改善</strong><small>未実施・今後の予定</small></article>
+                </div>
+
                 <div class="work-actions">
                     <a href="./site/hakata-hiyori/index.html" target="_blank" rel="noopener">完成ページを見る</a>
+                    <a href="./index.html#works" class="secondary-action">Works一覧へ戻る</a>
                 </div>
             </section>
-        </section>
+        </main>
     </div>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

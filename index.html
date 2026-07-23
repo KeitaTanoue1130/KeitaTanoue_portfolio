@@ -48,13 +48,13 @@
     </nav>
 
     <!-- hamburger SP -->
-    <div class="hamburger">
+    <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="sp-menu">
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </button>
 
-    <nav class="sp-nav">
+    <nav class="sp-nav" id="sp-menu" aria-label="スマートフォン用ナビゲーション" aria-hidden="true">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -73,7 +73,7 @@
             </h2>
 
             <p>
-                公開後のアクセスやユーザー行動を分析し、UI・UXの改善を重ねながら、より伝わり、より使いやすいWebサイトを目指します。
+                公開後のアクセスやユーザー行動を分析し、<span class="no-wrap">UI・UX</span>の改善を重ねながら、より伝わり、より使いやすい<span class="no-wrap">Webサイト</span>を目指します。
             </p>
         </div>
     </section>
@@ -197,8 +197,9 @@
                             <span class="case-study-thumb-status">Ongoing Project</span>
                         </div>
                         <p class="case-study-card-title">Portfolio Improvement Project</p>
-                        <p class="case-study-card-meta">Web / Case Study</p>
-                        <p class="case-study-card-status">Ongoing Project</p>
+                        <p class="case-study-card-info">
+                            <span>Web / Case Study</span><span class="case-study-card-divider" aria-hidden="true">｜</span><span>Ongoing Project</span>
+                        </p>
                     </a>
                 </li>
 

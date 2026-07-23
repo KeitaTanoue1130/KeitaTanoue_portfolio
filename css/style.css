@@ -157,8 +157,14 @@ h2 {
 }
 
 .fv p {
-    font-size: 13px;
-    line-height: 1.6;
+    max-width: 800px;
+    margin: 14px auto 0;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.no-wrap {
+    white-space: nowrap;
 }
 
 .fv h2 {
@@ -218,8 +224,12 @@ h2 {
 
 .work-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
+}
+
+.work-item {
+    min-width: 0;
 }
 
 .work-list img {
@@ -325,6 +335,8 @@ h2 {
 /* サムネ枠 */
 .work-thumb {
     position: relative;
+    width: 100%;
+    max-width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 8px;
@@ -747,24 +759,20 @@ textarea {
     line-height: 1.5;
 }
 
-.case-study-card-meta,
-.case-study-card-status {
-    display: inline-block;
+.case-study-card-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px 5px;
     margin: 0;
     color: #666;
-}
-
-.case-study-card-meta {
     font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
 }
 
-.case-study-card-status {
-    margin-left: 8px;
-    padding: 3px 10px;
-    border: 1px solid #aaa;
-    border-radius: 999px;
-    font-size: 12px;
-    letter-spacing: 0.04em;
+.case-study-card-divider {
+    color: #aaa;
 }
 
 .case-study-thumb {
@@ -847,6 +855,7 @@ textarea {
     max-width: 680px;
     margin: 0 auto;
     line-height: 2;
+    text-align: left;
 }
 
 .case-study-section {
@@ -931,6 +940,26 @@ textarea {
 .case-study-status-grid dd {
     font-size: 20px;
     font-weight: 700;
+}
+
+.case-study-log-link {
+    margin-top: 18px;
+    text-align: right;
+}
+
+.case-study-log-link a {
+    display: inline-block;
+    border-bottom: 1px solid currentColor;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.case-study-log-link a::after {
+    content: " ↓";
+}
+
+#latest-improvement-log {
+    scroll-margin-top: 100px;
 }
 
 .improvement-log {
@@ -1053,11 +1082,18 @@ textarea {
     .hamburger {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 6px;
         position: fixed;
-        top: 20px;
-        right: 20px;
+        top: 10px;
+        right: 10px;
         z-index: 200;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 0;
+        background: transparent;
         cursor: pointer;
     }
 
@@ -1066,6 +1102,11 @@ textarea {
         height: 2px;
         background: #333;
         transition: 0.3s;
+    }
+
+    .hamburger:focus-visible {
+        outline: 2px solid #333;
+        outline-offset: 2px;
     }
 
     .hamburger.is-active span:nth-child(1) {
@@ -1093,6 +1134,8 @@ textarea {
         z-index: 150;
         padding: 80px 30px;
         transition: 0.3s;
+        visibility: hidden;
+        pointer-events: none;
         background:
             rgba(255, 255, 255, .85);
 
@@ -1102,6 +1145,8 @@ textarea {
 
     .sp-nav.is-active {
         right: 0;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .sp-nav ul {
@@ -1133,8 +1178,10 @@ textarea {
     }
 
     .fv p {
-        font-size: 13px;
-        line-height: 1.6;
+        max-width: 340px;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.75;
         color: #fff;
     }
 
@@ -1150,7 +1197,7 @@ textarea {
 
     /* work */
     .work-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     /* skills */
@@ -1198,6 +1245,10 @@ textarea {
         margin-bottom: 52px;
     }
 
+    .case-study-hero .work-lead {
+        text-align: center;
+    }
+
     .case-study-section {
         margin-top: 52px;
     }
@@ -1219,6 +1270,10 @@ textarea {
         text-align: left;
     }
 
+    .case-study-log-link {
+        text-align: left;
+    }
+
     .case-study-status-grid dt {
         margin-bottom: 0;
     }
@@ -1234,5 +1289,24 @@ textarea {
 
     .improvement-log-header h3 {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .work-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .work-item,
+    .work-list li a,
+    .work-thumb,
+    .work-thumb img,
+    .work-thumb video {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .case-study-card-info {
+        font-size: 12px;
     }
 }

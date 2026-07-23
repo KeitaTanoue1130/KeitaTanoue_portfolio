@@ -133,16 +133,34 @@ if (contactForm) {
 const hamburger = document.querySelector('.hamburger');
 const spNav = document.querySelector('.sp-nav');
 
-hamburger.addEventListener('click', () => {
-    spNav.classList.toggle('is-active');
-    hamburger.classList.toggle('is-active');
-});
-
-document.querySelectorAll('.sp-nav a').forEach(link => {
-    link.addEventListener('click', () => {
+if (hamburger && spNav) {
+    const closeSpMenu = () => {
         spNav.classList.remove('is-active');
+        hamburger.classList.remove('is-active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'メニューを開く');
+        spNav.setAttribute('aria-hidden', 'true');
+    };
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = spNav.classList.toggle('is-active');
+        hamburger.classList.toggle('is-active', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        hamburger.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+        spNav.setAttribute('aria-hidden', String(!isOpen));
     });
-});
+
+    document.querySelectorAll('.sp-nav a').forEach(link => {
+        link.addEventListener('click', closeSpMenu);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && spNav.classList.contains('is-active')) {
+            closeSpMenu();
+            hamburger.focus();
+        }
+    });
+}
 
 
 // ====================

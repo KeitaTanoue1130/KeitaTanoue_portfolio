@@ -33,6 +33,21 @@
         </nav>
     </header>
 
+    <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="sp-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="sp-nav" id="sp-menu" aria-label="スマートフォン用ナビゲーション" aria-hidden="true">
+        <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#works">Works</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <div class="wrapper">
         <main class="work-detail case-study-detail">
             <section class="case-study-hero">
@@ -97,6 +112,7 @@
                     <div><dt>Last Updated</dt><dd>2026.07.22</dd></div>
                     <div><dt>Status</dt><dd>Ongoing</dd></div>
                 </dl>
+                <p class="case-study-log-link"><a href="#latest-improvement-log">最新のImprovement Logを見る</a></p>
             </section>
 
             <section class="work-section case-study-section improvement-log-section">
@@ -106,7 +122,7 @@
 
                 <!-- Improvement Log: Vol.01 -->
                 <!-- 次回以降は、このarticleを複製して追加 -->
-                <article class="improvement-log">
+                <article class="improvement-log" id="latest-improvement-log">
                     <header class="improvement-log-header">
                         <div>
                             <span class="improvement-log-volume">Vol.01</span>
@@ -173,6 +189,7 @@
             </div>
         </main>
     </div>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
